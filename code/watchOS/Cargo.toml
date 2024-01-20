@@ -1,0 +1,10 @@
+[package]
+name = "watchOS"
+version = "0.1.0"
+edition = "2023"
+
+[lib]
+name = "watchOS"
+crate-type = ["staticlib"]
+
+[dependencies]
