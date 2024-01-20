@@ -560,6 +560,41 @@
         )
       )
     )
+    (symbol "Connector:TestPoint_Small" (pin_numbers hide) (pin_names (offset 0.762) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "TP" (at 0 3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "TestPoint_Small" (at 0 2.032 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "test point tp" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "test point" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "Pin* Test*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "TestPoint_Small_0_1"
+        (circle (center 0 0) (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "TestPoint_Small_1_1"
+        (pin passive line (at 0 0 90) (length 0)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Connector:USB_C_Receptacle" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "J4" (at 0 33.02 0)
         (effects (font (size 1.27 1.27)))
@@ -854,51 +889,6 @@
         (pin passive line (at -7.62 -40.64 90) (length 5.08)
           (name "SHIELD" (effects (font (size 1.27 1.27))))
           (number "S1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Connector_Generic:Conn_01x02" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "J" (at 0 2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "Conn_01x02" (at 0 -5.08 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "connector" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "Conn_01x02_1_1"
-        (rectangle (start -1.27 -2.413) (end 0 -2.667)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 0.127) (end 0 -0.127)
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -1.27 1.27) (end 1.27 -3.81)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin passive line (at -5.08 0 0) (length 3.81)
-          (name "Pin_1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -5.08 -2.54 0) (length 3.81)
-          (name "Pin_2" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -1686,121 +1676,6 @@
         (pin passive line (at 3.81 0 180) (length 2.54)
           (name "A2" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Interface_USB:FT231XQ" (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at -13.97 20.32 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "FT231XQ" (at 6.35 20.32 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.5x2.5mm" (at 34.29 -20.32 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT231X.pdf" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "FTDI USB UART interface converter" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Full Speed USB to Full Handshake UART, QFN-20" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "QFN*4x4mm*P0.5mm*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "FT231XQ_0_1"
-        (rectangle (start -13.97 19.05) (end 13.97 -19.05)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-      )
-      (symbol "FT231XQ_1_1"
-        (pin input line (at 17.78 12.7 180) (length 3.81)
-          (name "RXD" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_out line (at -17.78 15.24 0) (length 3.81)
-          (name "3V3OUT" (effects (font (size 1.27 1.27))))
-          (number "10" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -17.78 0 0) (length 3.81)
-          (name "~{RESET}" (effects (font (size 1.27 1.27))))
-          (number "11" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at -2.54 22.86 270) (length 3.81)
-          (name "VCC" (effects (font (size 1.27 1.27))))
-          (number "12" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 -22.86 90) (length 3.81)
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "13" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at 17.78 -10.16 180) (length 3.81)
-          (name "CBUS1" (effects (font (size 1.27 1.27))))
-          (number "14" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at 17.78 -7.62 180) (length 3.81)
-          (name "CBUS0" (effects (font (size 1.27 1.27))))
-          (number "15" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at 17.78 -15.24 180) (length 3.81)
-          (name "CBUS3" (effects (font (size 1.27 1.27))))
-          (number "16" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at 17.78 15.24 180) (length 3.81)
-          (name "TXD" (effects (font (size 1.27 1.27))))
-          (number "17" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at 17.78 5.08 180) (length 3.81)
-          (name "~{DTR}" (effects (font (size 1.27 1.27))))
-          (number "18" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at 17.78 10.16 180) (length 3.81)
-          (name "~{RTS}" (effects (font (size 1.27 1.27))))
-          (number "19" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at 17.78 -2.54 180) (length 3.81)
-          (name "~{RI}" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 2.54 22.86 270) (length 3.81)
-          (name "VCCIO" (effects (font (size 1.27 1.27))))
-          (number "20" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 2.54 -22.86 90) (length 3.81)
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "21" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at -2.54 -22.86 90) (length 3.81)
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at 17.78 2.54 180) (length 3.81)
-          (name "~{DSR}" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at 17.78 0 180) (length 3.81)
-          (name "~{DCD}" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at 17.78 7.62 180) (length 3.81)
-          (name "~{CTS}" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at 17.78 -12.7 180) (length 3.81)
-          (name "CBUS2" (effects (font (size 1.27 1.27))))
-          (number "7" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at -17.78 5.08 0) (length 3.81)
-          (name "USBDP" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
-        )
-        (pin bidirectional line (at -17.78 7.62 0) (length 3.81)
-          (name "USBDM" (effects (font (size 1.27 1.27))))
-          (number "9" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -2815,9 +2690,6 @@
   (junction (at 311.15 228.6) (diameter 0) (color 0 0 0 0)
     (uuid 0d270b8a-9847-4805-bf10-a93a0403da30)
   )
-  (junction (at 31.75 104.14) (diameter 0) (color 0 0 0 0)
-    (uuid 0e7756a5-ca09-46dd-b1e5-f746a4102af8)
-  )
   (junction (at 219.71 100.33) (diameter 0) (color 0 0 0 0)
     (uuid 1154f47d-b0ad-47c4-a635-75fa84031022)
   )
@@ -2884,9 +2756,6 @@
   (junction (at 222.25 40.64) (diameter 0) (color 0 0 0 0)
     (uuid 3555e09a-307b-4f89-9abc-5b93ae4de707)
   )
-  (junction (at 49.53 146.05) (diameter 0) (color 0 0 0 0)
-    (uuid 3cce4cae-fc59-4556-a2ac-99c88f3e146c)
-  )
   (junction (at 29.21 90.17) (diameter 0) (color 0 0 0 0)
     (uuid 42cf6d43-ec07-4115-b6b1-11f427466d5d)
   )
@@ -2905,7 +2774,7 @@
   (junction (at 44.45 38.1) (diameter 0) (color 0 0 0 0)
     (uuid 532c094f-56a9-4e3a-86f3-05b64f98a770)
   )
-  (junction (at 49.53 153.67) (diameter 0) (color 0 0 0 0)
+  (junction (at 53.34 217.17) (diameter 0) (color 0 0 0 0)
     (uuid 54c774ba-ff55-4e70-afed-e9a2f524a7c8)
   )
   (junction (at 219.71 90.17) (diameter 0) (color 0 0 0 0)
@@ -2940,9 +2809,6 @@
   )
   (junction (at 233.68 102.87) (diameter 0) (color 0 0 0 0)
     (uuid 6a559bdb-9965-43b1-9317-c2d64529d8c7)
-  )
-  (junction (at 46.99 88.9) (diameter 0) (color 0 0 0 0)
-    (uuid 6c3fbf7f-4077-4af5-a001-de6a22cce62d)
   )
   (junction (at 233.68 107.95) (diameter 0) (color 0 0 0 0)
     (uuid 6c42475c-f5a1-4025-a6e5-acf56c965154)
@@ -3010,12 +2876,6 @@
   (junction (at 347.98 240.03) (diameter 0) (color 0 0 0 0)
     (uuid 99622c53-b11b-4b65-8d3a-9e37672da18f)
   )
-  (junction (at 58.42 91.44) (diameter 0) (color 0 0 0 0)
-    (uuid 9c4d2b94-a58e-48c6-a659-3613d1911f51)
-  )
-  (junction (at 46.99 93.98) (diameter 0) (color 0 0 0 0)
-    (uuid a3773352-ee26-48fe-9c50-eb30216a7c61)
-  )
   (junction (at 219.71 102.87) (diameter 0) (color 0 0 0 0)
     (uuid a41b1b66-bbae-4760-973e-0eb15a646598)
   )
@@ -3045,9 +2905,6 @@
   )
   (junction (at 339.09 229.87) (diameter 0) (color 0 0 0 0)
     (uuid b85767ea-6665-418a-9f1d-d1ab376f32c6)
-  )
-  (junction (at 21.59 104.14) (diameter 0) (color 0 0 0 0)
-    (uuid b96e041e-4f8f-444b-a8d8-e39034b53d60)
   )
   (junction (at 332.74 224.79) (diameter 0) (color 0 0 0 0)
     (uuid bb5b8ad6-aec1-4761-b244-b1e2ed16281e)
@@ -3088,9 +2945,6 @@
   (junction (at 233.68 97.79) (diameter 0) (color 0 0 0 0)
     (uuid e01b4706-8617-4ff3-b06d-9d1eadb0bc77)
   )
-  (junction (at 52.07 146.05) (diameter 0) (color 0 0 0 0)
-    (uuid e250f991-7a3b-4c0b-b050-5b345deb8195)
-  )
   (junction (at 351.79 207.01) (diameter 0) (color 0 0 0 0)
     (uuid e2cfc488-dea0-402c-83d8-0c3672877fee)
   )
@@ -3115,6 +2969,9 @@
   (junction (at 233.68 92.71) (diameter 0) (color 0 0 0 0)
     (uuid fb29817b-b49f-4f62-8567-799f9198d658)
   )
+  (junction (at 264.16 110.49) (diameter 0) (color 0 0 0 0)
+    (uuid fc3bd1b6-f59b-480a-b4b8-c9e310a6c0fd)
+  )
   (junction (at 311.15 246.38) (diameter 0) (color 0 0 0 0)
     (uuid fd3f8214-9562-492b-80dd-14c390fafc9b)
   )
@@ -3123,28 +2980,18 @@
   (no_connect (at 393.7 144.78) (uuid 1a5f3073-a72d-402a-aa54-1c36f350781a))
   (no_connect (at 351.79 33.02) (uuid 1aaeda09-8650-483f-913f-4146c3eadb3d))
   (no_connect (at 44.45 57.15) (uuid 1c1a442a-dc28-42a6-ab6b-8f9926f554c1))
-  (no_connect (at 67.31 123.19) (uuid 2682f370-a42e-4bf8-8ea0-8e571db634f3))
-  (no_connect (at 67.31 115.57) (uuid 437420f8-93db-49dd-92eb-2773936111f2))
   (no_connect (at 391.16 184.15) (uuid 4927f184-eacb-4fdf-889e-e5b4ef73b56f))
-  (no_connect (at 67.31 135.89) (uuid 4eb1100c-4f63-444f-b322-88c09b01fd69))
-  (no_connect (at 67.31 125.73) (uuid 56467f23-2de4-4b6d-b932-6dc3b2eb073c))
-  (no_connect (at 67.31 138.43) (uuid 5bc1c8c1-73b5-4e7e-881f-49508c788ac3))
-  (no_connect (at 67.31 118.11) (uuid 6b5994dc-4667-413b-92a2-4b4f49d4135f))
   (no_connect (at 391.16 186.69) (uuid 6fe7cc2d-41f5-42ca-88e8-988bebffebd1))
   (no_connect (at 393.7 147.32) (uuid 72ab06f5-0fa1-4c1e-bcde-3b51b1e698f2))
   (no_connect (at 44.45 59.69) (uuid 75523289-4bb9-4e11-9960-b07a6a451c9f))
-  (no_connect (at 67.31 133.35) (uuid 7c23f77b-4a90-4fcc-aa99-780b94693da8))
-  (no_connect (at 67.31 130.81) (uuid 8bfa712f-0a68-411d-b776-866bc3f55508))
   (no_connect (at 44.45 74.93) (uuid 914dcf74-d2ec-4276-8e2f-e28f733c0210))
   (no_connect (at 44.45 80.01) (uuid 94d0793e-79af-461d-a984-e8150b21f996))
-  (no_connect (at 54.61 153.67) (uuid b9a10783-f173-435e-984a-b3571f42d4b9))
+  (no_connect (at 58.42 217.17) (uuid b9a10783-f173-435e-984a-b3571f42d4b9))
   (no_connect (at 44.45 49.53) (uuid c21115a3-adf0-429d-b41b-52ad2f247151))
   (no_connect (at 44.45 67.31) (uuid c49763fd-2777-4287-8002-491542ff89e4))
-  (no_connect (at 67.31 113.03) (uuid c776cfc3-3a47-4afa-9c7c-4768a0ecb9db))
   (no_connect (at 44.45 72.39) (uuid cbebb2f2-1db6-4568-b268-eed990b4608f))
   (no_connect (at 44.45 52.07) (uuid ce929efb-b7a1-489b-b203-bd6b181e3390))
   (no_connect (at 44.45 64.77) (uuid e4b303ad-3220-4993-a9c5-63498bb5719a))
-  (no_connect (at 67.31 120.65) (uuid f8ee1e32-263c-4663-8f84-8d0aa60594da))
 
   (wire (pts (xy 292.1 22.86) (xy 287.02 22.86))
     (stroke (width 0) (type default))
@@ -3198,10 +3045,6 @@
     (stroke (width 0) (type default))
     (uuid 0bd1b67e-3de3-4e89-b00c-543b55874a22)
   )
-  (wire (pts (xy 46.99 86.36) (xy 46.99 88.9))
-    (stroke (width 0) (type default))
-    (uuid 0c205502-a60d-48e2-9473-24cbc4143972)
-  )
   (wire (pts (xy 267.97 100.33) (xy 279.4 100.33))
     (stroke (width 0) (type default))
     (uuid 0d0df507-fcfb-4231-b362-4191057495fb)
@@ -3242,10 +3085,6 @@
     (stroke (width 0) (type default))
     (uuid 181ba342-a174-48ed-b76c-b4bea43b6660)
   )
-  (wire (pts (xy 245.11 111.76) (xy 247.65 111.76))
-    (stroke (width 0) (type default))
-    (uuid 19569f9e-865c-4ec8-846a-d6934d9b4b58)
-  )
   (wire (pts (xy 378.46 171.45) (xy 378.46 173.99))
     (stroke (width 0) (type default))
     (uuid 19a37000-6afa-4dd5-b776-4e23ba57ea07)
@@ -3257,10 +3096,6 @@
   (wire (pts (xy 217.17 72.39) (xy 217.17 71.12))
     (stroke (width 0) (type default))
     (uuid 1cc13abc-01c5-46a4-ae33-5a5b36c4a312)
-  )
-  (wire (pts (xy 58.42 93.98) (xy 52.07 93.98))
-    (stroke (width 0) (type default))
-    (uuid 1df1c667-5202-4e63-bfde-fe233ccd6576)
   )
   (wire (pts (xy 347.98 147.32) (xy 350.52 147.32))
     (stroke (width 0) (type default))
@@ -3366,10 +3201,6 @@
     (stroke (width 0) (type default))
     (uuid 33171f95-2ddf-4922-8694-36693dce94d6)
   )
-  (wire (pts (xy 52.07 100.33) (xy 52.07 97.79))
-    (stroke (width 0) (type default))
-    (uuid 3349c130-a355-4a0f-9693-51eb1c9657d6)
-  )
   (wire (pts (xy 337.82 142.24) (xy 350.52 142.24))
     (stroke (width 0) (type default))
     (uuid 33cd5a07-d38b-4b6d-8af6-196008efed6c)
@@ -3422,10 +3253,6 @@
     (stroke (width 0) (type default))
     (uuid 3e7b9ff2-dcd3-4ba7-8a26-2f29d5e11d42)
   )
-  (wire (pts (xy 30.48 119.38) (xy 30.48 118.11))
-    (stroke (width 0) (type default))
-    (uuid 3e9273d7-aaa4-4750-b583-1c37899cde43)
-  )
   (wire (pts (xy 287.02 20.32) (xy 287.02 22.86))
     (stroke (width 0) (type default))
     (uuid 3ef9a1ea-262e-4be5-8143-2dc8dbfc60b8)
@@ -3434,13 +3261,9 @@
     (stroke (width 0) (type default))
     (uuid 3f1531e4-a6e9-4ca9-96c1-9dec39b87234)
   )
-  (wire (pts (xy 43.18 153.67) (xy 49.53 153.67))
+  (wire (pts (xy 46.99 217.17) (xy 53.34 217.17))
     (stroke (width 0) (type default))
     (uuid 40cd3c09-8210-4247-a000-8364428a3188)
-  )
-  (wire (pts (xy 154.94 146.05) (xy 168.91 146.05))
-    (stroke (width 0) (type default))
-    (uuid 41c765b6-6e2a-48a3-8152-f27516e91fe9)
   )
   (wire (pts (xy 157.48 163.83) (xy 161.29 163.83))
     (stroke (width 0) (type default))
@@ -3462,13 +3285,9 @@
     (stroke (width 0) (type default))
     (uuid 458641e9-0b1d-48fd-bca5-25d35b318dd5)
   )
-  (wire (pts (xy 54.61 189.23) (xy 54.61 191.77))
+  (wire (pts (xy 58.42 252.73) (xy 58.42 255.27))
     (stroke (width 0) (type default))
     (uuid 45ca3937-1988-40e1-9809-678c23e4993e)
-  )
-  (wire (pts (xy 31.75 97.79) (xy 31.75 104.14))
-    (stroke (width 0) (type default))
-    (uuid 45f4a3f6-0269-458b-95c7-d272e75a13cc)
   )
   (wire (pts (xy 44.45 43.18) (xy 46.99 43.18))
     (stroke (width 0) (type default))
@@ -3514,9 +3333,13 @@
     (stroke (width 0) (type default))
     (uuid 5076bcee-2964-414f-8166-10d0225a54dc)
   )
-  (wire (pts (xy 245.11 110.49) (xy 233.68 110.49))
+  (wire (pts (xy 233.68 110.49) (xy 264.16 110.49))
     (stroke (width 0) (type default))
-    (uuid 5147a3b8-17e5-4219-9b40-25d222e1ae37)
+    (uuid 508b9af7-e315-42f9-a8b7-540e1bc3538f)
+  )
+  (wire (pts (xy 264.16 110.49) (xy 264.16 114.3))
+    (stroke (width 0) (type default))
+    (uuid 53207515-df4f-4789-bf36-6767898a25de)
   )
   (wire (pts (xy 247.65 107.95) (xy 245.11 107.95))
     (stroke (width 0) (type default))
@@ -3553,10 +3376,6 @@
   (wire (pts (xy 403.86 85.09) (xy 397.51 85.09))
     (stroke (width 0) (type default))
     (uuid 5ce71f6c-e447-4351-b35e-668f1581ca8d)
-  )
-  (wire (pts (xy 243.84 114.3) (xy 247.65 114.3))
-    (stroke (width 0) (type default))
-    (uuid 5dbf7c36-adec-423a-bb54-4851320d4b61)
   )
   (wire (pts (xy 157.48 171.45) (xy 161.29 171.45))
     (stroke (width 0) (type default))
@@ -3754,7 +3573,7 @@
     (stroke (width 0) (type default))
     (uuid 814ce2b3-ee3c-4798-b933-fda4af80bbed)
   )
-  (wire (pts (xy 223.52 176.53) (xy 223.52 185.42))
+  (wire (pts (xy 223.52 176.53) (xy 223.52 180.34))
     (stroke (width 0) (type default))
     (uuid 81530eab-be9c-49ad-805a-5f75a8c2898e)
   )
@@ -3778,21 +3597,9 @@
     (stroke (width 0) (type default))
     (uuid 867612b2-69f7-4803-bbbe-23a73512bf84)
   )
-  (wire (pts (xy 58.42 91.44) (xy 58.42 93.98))
-    (stroke (width 0) (type default))
-    (uuid 867d8234-0db0-4820-868e-96f8bc82ad77)
-  )
   (wire (pts (xy 222.25 44.45) (xy 222.25 40.64))
     (stroke (width 0) (type default))
     (uuid 86d329a7-07c6-4eb6-8609-a6369cb70107)
-  )
-  (wire (pts (xy 243.84 114.3) (xy 243.84 113.03))
-    (stroke (width 0) (type default))
-    (uuid 86ead34a-4851-41bd-a91a-d5a512cc524a)
-  )
-  (wire (pts (xy 21.59 104.14) (xy 31.75 104.14))
-    (stroke (width 0) (type default))
-    (uuid 88079a9a-df17-434a-a6ec-62e921dd1b7d)
   )
   (wire (pts (xy 271.78 25.4) (xy 271.78 27.94))
     (stroke (width 0) (type default))
@@ -3826,10 +3633,6 @@
     (stroke (width 0) (type default))
     (uuid 8cd6ca7f-1aa1-4d1f-b0b2-0c1090c7ed4d)
   )
-  (wire (pts (xy 46.99 88.9) (xy 46.99 93.98))
-    (stroke (width 0) (type default))
-    (uuid 921d6708-e3d3-4876-b7af-e012ab61f531)
-  )
   (wire (pts (xy 349.25 30.48) (xy 351.79 30.48))
     (stroke (width 0) (type default))
     (uuid 92994e17-8a5f-41c3-8ba3-391328a46685)
@@ -3862,10 +3665,6 @@
     (stroke (width 0) (type default))
     (uuid 96cff771-86e9-4ce3-92af-8cc14656b064)
   )
-  (wire (pts (xy 46.99 93.98) (xy 46.99 100.33))
-    (stroke (width 0) (type default))
-    (uuid 97c6a1ec-a5ad-42de-9c8b-0d3541d8223a)
-  )
   (wire (pts (xy 341.63 95.25) (xy 341.63 92.71))
     (stroke (width 0) (type default))
     (uuid 97d03fc0-8d6d-4314-8957-e435b776369f)
@@ -3873,10 +3672,6 @@
   (wire (pts (xy 73.66 22.86) (xy 73.66 21.59))
     (stroke (width 0) (type default))
     (uuid 9863ea67-ea24-4595-9027-e6edf1158b19)
-  )
-  (wire (pts (xy 13.97 104.14) (xy 21.59 104.14))
-    (stroke (width 0) (type default))
-    (uuid 98746abc-b369-442e-a3e7-61f772a029c5)
   )
   (wire (pts (xy 152.4 43.18) (xy 172.72 43.18))
     (stroke (width 0) (type default))
@@ -3962,9 +3757,9 @@
     (stroke (width 0) (type default))
     (uuid a32be10c-8e89-49a5-8133-c07b161dad9c)
   )
-  (wire (pts (xy 46.99 146.05) (xy 49.53 146.05))
+  (wire (pts (xy 264.16 110.49) (xy 266.7 110.49))
     (stroke (width 0) (type default))
-    (uuid a57240de-b3d2-4b93-8f01-2fc502bc798f)
+    (uuid a4143599-7cb9-41f7-b25b-4ed00808e776)
   )
   (wire (pts (xy 208.28 55.88) (xy 209.55 55.88))
     (stroke (width 0) (type default))
@@ -3998,10 +3793,6 @@
     (stroke (width 0) (type default))
     (uuid ab88c328-1e29-46da-a265-3a76e660f323)
   )
-  (wire (pts (xy 30.48 115.57) (xy 31.75 115.57))
-    (stroke (width 0) (type default))
-    (uuid acd77e65-8c37-47f7-aec2-e88fae6c3923)
-  )
   (wire (pts (xy 190.5 19.05) (xy 190.5 21.59))
     (stroke (width 0) (type default))
     (uuid ad748690-152c-4b4e-9b0f-89b315fe7839)
@@ -4026,10 +3817,6 @@
     (stroke (width 0) (type default))
     (uuid b3ed238d-3dc6-45dc-aa2a-acf4af03ccb0)
   )
-  (wire (pts (xy 162.56 148.59) (xy 168.91 148.59))
-    (stroke (width 0) (type default))
-    (uuid b49221b2-3f83-4730-8eda-f142db2827d0)
-  )
   (wire (pts (xy 148.59 20.32) (xy 151.13 20.32))
     (stroke (width 0) (type default))
     (uuid b660087d-0d39-43d0-af5d-b2e153f4edb8)
@@ -4037,10 +3824,6 @@
   (wire (pts (xy 330.2 224.79) (xy 332.74 224.79))
     (stroke (width 0) (type default))
     (uuid b7a954e4-8c0c-40e2-8b86-9688e919f69b)
-  )
-  (wire (pts (xy 245.11 111.76) (xy 245.11 110.49))
-    (stroke (width 0) (type default))
-    (uuid b885e67b-ee28-4eb5-bcc0-2fd1eee2c304)
   )
   (wire (pts (xy 148.59 29.21) (xy 148.59 30.48))
     (stroke (width 0) (type default))
@@ -4058,7 +3841,7 @@
     (stroke (width 0) (type default))
     (uuid bba601fb-f884-4816-89a3-0c5fb7a1e150)
   )
-  (wire (pts (xy 49.53 153.67) (xy 52.07 153.67))
+  (wire (pts (xy 53.34 217.17) (xy 55.88 217.17))
     (stroke (width 0) (type default))
     (uuid bcc27763-5f83-4156-ac1b-1349d9422be0)
   )
@@ -4086,10 +3869,6 @@
     (stroke (width 0) (type default))
     (uuid c0657f5b-4cd0-44d8-9767-3a6c8a1a7f21)
   )
-  (wire (pts (xy 49.53 146.05) (xy 52.07 146.05))
-    (stroke (width 0) (type default))
-    (uuid c167f2be-1bc0-4a5b-aabc-7681367160c5)
-  )
   (wire (pts (xy 45.72 24.13) (xy 44.45 24.13))
     (stroke (width 0) (type default))
     (uuid c174ae53-2117-4ce6-9e14-ebcb9b3cefc6)
@@ -4109,6 +3888,10 @@
   (wire (pts (xy 213.36 72.39) (xy 217.17 72.39))
     (stroke (width 0) (type default))
     (uuid c747dcc0-a1f6-40be-9330-4de5159be263)
+  )
+  (wire (pts (xy 222.25 179.07) (xy 222.25 185.42))
+    (stroke (width 0) (type default))
+    (uuid c89da4f0-c8fd-447f-841e-524f7f48226c)
   )
   (wire (pts (xy 353.06 237.49) (xy 351.79 237.49))
     (stroke (width 0) (type default))
@@ -4134,17 +3917,9 @@
     (stroke (width 0) (type default))
     (uuid cbe31532-91ee-4a38-b2b1-a829cfc3b3a9)
   )
-  (wire (pts (xy 58.42 88.9) (xy 58.42 91.44))
-    (stroke (width 0) (type default))
-    (uuid cded97d8-0525-40f2-9be3-e775f6b3075c)
-  )
   (wire (pts (xy 321.31 241.3) (xy 322.58 241.3))
     (stroke (width 0) (type default))
     (uuid ce6cfdf5-31df-40e3-81b2-193bbd247962)
-  )
-  (wire (pts (xy 54.61 146.05) (xy 52.07 146.05))
-    (stroke (width 0) (type default))
-    (uuid cf9e6788-a477-4bca-8776-6354f92693e3)
   )
   (wire (pts (xy 163.83 102.87) (xy 163.83 107.95))
     (stroke (width 0) (type default))
@@ -4166,10 +3941,6 @@
     (stroke (width 0) (type default))
     (uuid d31a5980-1a8d-4c0d-805c-bbdd74cbac26)
   )
-  (wire (pts (xy 30.48 118.11) (xy 31.75 118.11))
-    (stroke (width 0) (type default))
-    (uuid d33e6a57-753f-40a2-940a-e680546621f8)
-  )
   (wire (pts (xy 271.78 27.94) (xy 276.86 27.94))
     (stroke (width 0) (type default))
     (uuid d4021a2a-e832-4364-a1af-ff1971b77917)
@@ -4182,7 +3953,7 @@
     (stroke (width 0) (type default))
     (uuid d6830f52-d316-4ff8-9951-e04eee893ee9)
   )
-  (wire (pts (xy 24.13 134.62) (xy 24.13 135.89))
+  (wire (pts (xy 24.13 186.69) (xy 24.13 187.96))
     (stroke (width 0) (type default))
     (uuid d9909b73-913b-4526-acc7-dc000016229e)
   )
@@ -4226,13 +3997,13 @@
     (stroke (width 0) (type default))
     (uuid df0850d1-cda0-4a8b-b0ca-523009d39109)
   )
-  (wire (pts (xy 13.97 123.19) (xy 13.97 104.14))
-    (stroke (width 0) (type default))
-    (uuid df9d9082-9bc1-4410-b034-585894de5bb0)
-  )
   (wire (pts (xy 154.94 55.88) (xy 172.72 55.88))
     (stroke (width 0) (type default))
     (uuid e22a5409-2bea-4b3c-b079-9ab6233f7ee3)
+  )
+  (wire (pts (xy 219.71 179.07) (xy 222.25 179.07))
+    (stroke (width 0) (type default))
+    (uuid e2ba63d5-ea1a-449d-b138-e6b554122f0d)
   )
   (wire (pts (xy 345.44 207.01) (xy 351.79 207.01))
     (stroke (width 0) (type default))
@@ -4286,10 +4057,6 @@
     (stroke (width 0) (type default))
     (uuid ec3a4132-ef97-4ebc-ad38-b061fd237e9b)
   )
-  (wire (pts (xy 30.48 115.57) (xy 30.48 114.3))
-    (stroke (width 0) (type default))
-    (uuid ec5040ac-3bae-4d35-9afb-7d7d2753cd4b)
-  )
   (wire (pts (xy 300.99 33.02) (xy 302.26 33.02))
     (stroke (width 0) (type default))
     (uuid eddbae32-69ad-453d-a6ec-3799eba0c189)
@@ -4326,10 +4093,6 @@
     (stroke (width 0) (type default))
     (uuid f191485e-89fe-460e-a4b3-8669ac9a6469)
   )
-  (wire (pts (xy 52.07 97.79) (xy 31.75 97.79))
-    (stroke (width 0) (type default))
-    (uuid f2196605-7b52-4e22-afba-b6997b4f7ceb)
-  )
   (wire (pts (xy 341.63 40.64) (xy 351.79 40.64))
     (stroke (width 0) (type default))
     (uuid f391a283-70f5-4a80-9123-955868f3b774)
@@ -4350,10 +4113,6 @@
     (stroke (width 0) (type default))
     (uuid f76e3187-2121-455a-b78d-dbfa9d79d59a)
   )
-  (wire (pts (xy 31.75 104.14) (xy 31.75 107.95))
-    (stroke (width 0) (type default))
-    (uuid f7fb51a5-8c2d-4688-8ad1-bc3a34b5a7e5)
-  )
   (wire (pts (xy 217.17 60.96) (xy 217.17 63.5))
     (stroke (width 0) (type default))
     (uuid f83e4f07-878e-4b9f-a880-4f235fc6e7f7)
@@ -4366,10 +4125,6 @@
     (stroke (width 0) (type default))
     (uuid f9a3e8c6-52f5-48ca-9fe9-bb5b60d917b0)
   )
-  (wire (pts (xy 52.07 88.9) (xy 58.42 88.9))
-    (stroke (width 0) (type default))
-    (uuid fa98fe91-e4ff-4ad0-89ee-f1ef4c094726)
-  )
   (wire (pts (xy 154.94 35.56) (xy 154.94 40.64))
     (stroke (width 0) (type default))
     (uuid fae86dac-ab85-4ea2-92cc-f65c6d35cc02)
@@ -4377,10 +4132,6 @@
   (wire (pts (xy 171.45 64.77) (xy 172.72 64.77))
     (stroke (width 0) (type default))
     (uuid faf5902b-a4a2-4c58-b543-9d6d442b59e6)
-  )
-  (wire (pts (xy 31.75 123.19) (xy 13.97 123.19))
-    (stroke (width 0) (type default))
-    (uuid fb959413-b8ed-4b2b-952a-bd757bb40190)
   )
   (wire (pts (xy 351.79 48.26) (xy 341.63 48.26))
     (stroke (width 0) (type default))
@@ -4455,7 +4206,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid dd3514d8-467d-4277-a8f5-36ede2e1d2d4)
   )
-  (text "LED\nspeaker?\nbuttons" (at 256.54 69.85 0)
+  (text "LED\naudio driver\nbuttons" (at 256.54 69.85 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid edf0e01d-a907-4af9-8cc4-b69dd4d5199c)
   )
@@ -4463,6 +4214,10 @@
   (label "MEM_D5" (at 231.14 163.83 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 0085defe-ed5c-4c69-af25-11f984db3a5c)
+  )
+  (label "BATT-" (at 242.57 34.29 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid 033d260e-257b-4d55-b49d-c12fe82e4272)
   )
   (label "MEM_D5" (at 397.51 87.63 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -4496,6 +4251,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 0e84744b-cba2-4cdc-b210-06bc4dbb7284)
   )
+  (label "BATT+" (at 226.06 40.64 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 14e8da18-da88-46a6-8b1a-14046e5cf697)
+  )
   (label "MEM_D3" (at 157.48 161.29 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 15ff25c4-1c1e-460c-87f3-1dda2f956050)
@@ -4504,13 +4263,17 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 16b6d8f7-48ae-4851-8b69-29ed8bb6de12)
   )
-  (label "I2C1_SDA" (at 247.65 114.3 0) (fields_autoplaced)
+  (label "I2C1_SDA" (at 243.84 113.03 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 18c27aaa-cdf0-4e42-bfeb-7ba5fe8b5651)
   )
   (label "MEM_D1" (at 397.51 45.72 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 1a284b04-17f4-4925-a2ad-206bf7dc8765)
+  )
+  (label "BATT-" (at 226.06 43.18 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 1a880e58-6d17-44aa-8d0d-2cab42c28159)
   )
   (label "MEM_D0" (at 397.51 100.33 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -4564,10 +4327,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 49f59d41-3a8c-4f19-8655-edc8b3f6b2d4)
   )
-  (label "UART_MISO" (at 154.94 148.59 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid 4aaddcf5-22b9-462e-8283-9c4c2d0c83f7)
-  )
   (label "MEM_D6" (at 231.14 166.37 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4e104cb7-0267-41ab-b7dc-216513d3e4b0)
@@ -4579,10 +4338,6 @@
   (label "GPIO_45" (at 227.33 176.53 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5862315b-7270-4d1a-a2ee-cf4344ea3686)
-  )
-  (label "USB_DM" (at 22.86 114.3 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid 58983288-534b-480a-b5dd-729f471c0486)
   )
   (label "SPI2_" (at 219.71 146.05 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -4599,10 +4354,6 @@
   (label "MEM_DQS" (at 231.14 171.45 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 641e3cbd-bdde-40e5-bebe-cc38a1dc0ee2)
-  )
-  (label "USB_DP" (at 22.86 119.38 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid 6459c469-58a2-40dc-8a09-b47089de798f)
   )
   (label "MEM_CLK" (at 351.79 95.25 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
@@ -4632,10 +4383,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7493cc69-70df-4211-9311-606ab0beac24)
   )
-  (label "UART_MOSI" (at 154.94 146.05 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid 7631502d-99f2-4602-8f58-e5213d928536)
-  )
   (label "SD_D2" (at 317.5 219.71 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 7fb7d966-9370-4c70-aa4e-7bf891d403cd)
@@ -4663,14 +4410,6 @@
   (label "BAT_STAT2" (at 217.17 60.96 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8e8f7678-17ae-40fc-a06b-8e7f607979a5)
-  )
-  (label "UART_MISO" (at 67.31 110.49 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 8fca54e8-8953-4c1d-8b71-448bc8410e33)
-  )
-  (label "UART_MOSI" (at 67.31 107.95 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 920b331d-8dc7-4537-b20b-6375905b76fb)
   )
   (label "SPI2_" (at 219.71 143.51 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -4708,7 +4447,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b97de2e2-16f5-49ec-b8f1-e01d898ec108)
   )
-  (label "ANT" (at 24.13 138.43 0) (fields_autoplaced)
+  (label "ANT" (at 24.13 190.5 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid bad166c7-1e2e-4115-83f1-42ad50d43a5b)
   )
@@ -4732,7 +4471,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid d2bc7dec-b073-4155-b2b7-79c0d7b0a358)
   )
-  (label "I2C1_SCL" (at 247.65 111.76 0) (fields_autoplaced)
+  (label "I2C1_SCL" (at 266.7 110.49 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d30ebf16-fe09-486f-9dd0-0278a765fc5e)
   )
@@ -4768,6 +4507,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ec8f2bc8-bd11-46b2-a7e0-566702308c7c)
   )
+  (label "BATT+" (at 242.57 29.21 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid ef19a0af-e60f-4bb9-8414-fcbb76884b25)
+  )
   (label "I2C1_SCL" (at 276.86 39.37 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid f1407316-560c-4c24-8392-cc34e99aeaf3)
@@ -4789,24 +4532,49 @@
     (uuid fcb12d45-d777-4cab-9284-7e6d28bb19ed)
   )
 
-  (symbol (lib_id "power:+3V3") (at 231.14 185.42 270) (unit 1)
+  (symbol (lib_id "power:GND") (at 229.87 185.42 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 0294ec43-415b-4bfa-8402-d1234c8b4a83)
+    (property "Reference" "#PWR027" (at 236.22 185.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 233.68 185.42 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "" (at 229.87 185.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 229.87 185.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b97bd52b-ce70-474e-b87b-aa3a5e18b7ed))
+    (instances
+      (project "watch_pcb"
+        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
+          (reference "#PWR027") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 231.14 180.34 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0346d067-8fc9-4c2c-a226-03f7f4fc83a2)
-    (property "Reference" "#PWR066" (at 227.33 185.42 0)
+    (property "Reference" "#PWR066" (at 227.33 180.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 236.22 185.42 90)
+    (property "Value" "+3V3" (at 236.22 180.34 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 231.14 185.42 0)
+    (property "Footprint" "" (at 231.14 180.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 231.14 185.42 0)
+    (property "Datasheet" "" (at 231.14 180.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 2c043543-26ec-49d9-8cad-6ea1c74e7e7d))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR066") (unit 1)
         )
@@ -4851,7 +4619,7 @@
     (pin "2" (uuid a019f443-c54f-4778-9616-fe4f29f9bb0a))
     (pin "10" (uuid a219da02-6bc6-4941-8900-c4a9433931eb))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U7") (unit 1)
         )
@@ -4868,7 +4636,7 @@
     (property "Value" "1uF" (at 226.06 87.6363 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 223.52 86.36 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 223.52 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 223.52 86.36 0)
@@ -4877,7 +4645,7 @@
     (pin "2" (uuid c20439dd-95ed-4925-8fbe-f723e384f608))
     (pin "1" (uuid 081a4ec6-b215-4e1f-ab5d-c43993112ffb))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C25") (unit 1)
         )
@@ -4902,7 +4670,7 @@
     )
     (pin "1" (uuid b2b2808f-7fe0-4982-b49f-4c9c7e87b17c))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR041") (unit 1)
         )
@@ -4910,52 +4678,26 @@
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 43.18 153.67 90) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 46.99 217.17 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 05c02e25-cb0f-430d-a425-cebec64914d5)
-    (property "Reference" "#PWR026" (at 46.99 153.67 0)
+    (property "Reference" "#PWR026" (at 50.8 217.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 34.29 153.67 90)
+    (property "Value" "+3V3" (at 38.1 217.17 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 43.18 153.67 0)
+    (property "Footprint" "" (at 46.99 217.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 43.18 153.67 0)
+    (property "Datasheet" "" (at 46.99 217.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid bb4859d9-482a-4bed-ac1a-d79eb0ed01d8))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR026") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C_Small") (at 49.53 93.98 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 068124a8-a813-4e6e-8ecd-ab181382dfb6)
-    (property "Reference" "C16" (at 53.34 92.71 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "4.7uF" (at 53.34 95.25 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 49.53 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 49.53 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 9647935d-75a9-4f2a-a8cf-f853f7aae1d3))
-    (pin "2" (uuid b04d703b-2ae0-4af3-8871-855d44867410))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "C16") (unit 1)
         )
       )
     )
@@ -4978,7 +4720,7 @@
     )
     (pin "1" (uuid 3f00e712-e66f-4a89-ad0b-d5cfaccf8db2))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR030") (unit 1)
         )
@@ -4995,7 +4737,7 @@
     (property "Value" "4.7uF" (at 217.17 41.9163 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 214.63 40.64 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 214.63 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 214.63 40.64 0)
@@ -5004,7 +4746,7 @@
     (pin "2" (uuid 9529746d-2d10-442e-8414-cc4649fd6214))
     (pin "1" (uuid e0b44001-19d8-4488-88b8-15acb364afa6))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C20") (unit 1)
         )
@@ -5030,7 +4772,7 @@
     (pin "1" (uuid bfd80570-c784-4126-b021-23bec8743225))
     (pin "2" (uuid cd9d8a31-888e-4d7f-8556-d224071c464e))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C24") (unit 1)
         )
@@ -5047,7 +4789,7 @@
     (property "Value" "1uF" (at 281.94 104.1463 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 279.4 102.87 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 279.4 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 279.4 102.87 0)
@@ -5056,7 +4798,7 @@
     (pin "2" (uuid cb95afa9-778f-409f-9bbf-cd0a2d277f49))
     (pin "1" (uuid b95a24b7-8a74-45c2-b3bf-b6139620fc4d))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C34") (unit 1)
         )
@@ -5073,7 +4815,7 @@
     (property "Value" "10uF" (at 344.17 245.11 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 344.17 240.03 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 344.17 240.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 344.17 240.03 0)
@@ -5082,7 +4824,7 @@
     (pin "2" (uuid 7285917c-aad9-4c85-9b4a-2a658cb64759))
     (pin "1" (uuid 0e33b73e-e963-408b-b4f0-439ef2cdaa6b))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C13") (unit 1)
         )
@@ -5107,54 +4849,9 @@
     )
     (pin "1" (uuid 5fd0992f-7617-4f28-8158-fc53f732d78a))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR031") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Interface_USB:FT231XQ") (at 49.53 123.19 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 10a9bc9b-b634-4f6c-8aac-738684fdd4e0)
-    (property "Reference" "U4" (at 54.2641 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "FT231XQ" (at 54.2641 101.6 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.5x2.5mm" (at 83.82 143.51 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT231X.pdf" (at 49.53 123.19 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "9" (uuid 4a837c8d-639f-4627-95af-b558e246fec9))
-    (pin "8" (uuid d568ec61-8ba7-4d1b-b3e0-b8a64b228ec9))
-    (pin "19" (uuid c1a0bfd0-98b2-43d6-a800-f41952c81a09))
-    (pin "15" (uuid b939803d-a2d5-48be-a668-3b8bc22eabf5))
-    (pin "12" (uuid 38e40c8e-6434-48df-b005-72c65a28cfae))
-    (pin "20" (uuid 4e75c99c-70cf-4c5e-b2e9-9322c50dd0f7))
-    (pin "10" (uuid 40565699-592e-4b15-aba9-1568b5b69f31))
-    (pin "13" (uuid 2d0d578c-01fd-4b45-ad20-fbe863c5afef))
-    (pin "5" (uuid a66e0542-16e4-4cd1-8965-81ce13bb4177))
-    (pin "17" (uuid cdbba9c3-851a-4ff7-8262-28dd1314dfbb))
-    (pin "4" (uuid eaf0e049-f759-48d7-9f7e-5cf5c3bf02df))
-    (pin "14" (uuid 29afa977-88f5-453e-be8d-e4544eed11a2))
-    (pin "16" (uuid 93e9fc9a-714d-4517-9eb1-9cae8f83ef23))
-    (pin "18" (uuid 078793bf-929e-4bb4-90ea-97253feb054f))
-    (pin "1" (uuid 5c5d6ec9-ef63-428a-b2e8-54c88269bc16))
-    (pin "6" (uuid 09f85213-a628-4111-a651-1a2c9d51cd56))
-    (pin "3" (uuid 8a566f15-c5de-479e-9ddf-4591ce20f373))
-    (pin "21" (uuid d41839d3-0c76-415d-8dbb-3662f372383f))
-    (pin "11" (uuid 2844754f-ae96-4f55-a5a5-13cf4275b08f))
-    (pin "7" (uuid 0d9e04e7-5cca-43cd-840b-58f4d5813265))
-    (pin "2" (uuid 945df0e0-7f2b-4a16-8735-9f47fa1db1ef))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "U4") (unit 1)
         )
       )
     )
@@ -5166,10 +4863,10 @@
     (property "Reference" "R34" (at 241.3 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 241.3 118.11 0)
+    (property "Value" "2k" (at 241.3 118.11 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 238.252 116.84 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 238.252 116.84 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 240.03 116.84 0)
@@ -5178,7 +4875,7 @@
     (pin "2" (uuid fb62bb01-ce30-4dbe-8036-efb3b5d30719))
     (pin "1" (uuid ff76bbe1-b8ca-43fa-9dae-cbe18f298f60))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R34") (unit 1)
         )
@@ -5186,25 +4883,25 @@
     )
   )
 
-  (symbol (lib_id "Device:Antenna_Dipole") (at 19.05 138.43 90) (unit 1)
+  (symbol (lib_id "Device:Antenna_Dipole") (at 19.05 190.5 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 179b822e-c942-4f67-a393-dda2dcea64f6)
-    (property "Reference" "AE1" (at 29.21 132.08 90)
+    (property "Reference" "AE1" (at 29.21 184.15 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Antenna_Dipole" (at 29.21 129.54 90)
+    (property "Value" "Antenna_Dipole" (at 29.21 181.61 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "RF_Antenna:Texas_SWRA117D_2.4GHz_Right" (at 19.05 138.43 0)
+    (property "Footprint" "RF_Antenna:Texas_SWRA117D_2.4GHz_Right" (at 19.05 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 19.05 138.43 0)
+    (property "Datasheet" "~" (at 19.05 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1db3162d-acf8-43c7-825d-3905ec96d5da))
     (pin "2" (uuid c98d0462-905b-4ec6-8130-78958ed5976d))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "AE1") (unit 1)
         )
@@ -5221,7 +4918,7 @@
     (property "Value" "100nF" (at 257.81 104.1463 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 255.27 102.87 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 255.27 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 255.27 102.87 0)
@@ -5230,7 +4927,7 @@
     (pin "2" (uuid ea17f2b7-4ad5-440a-be5c-35175dad68a2))
     (pin "1" (uuid c5c80af3-34dd-4455-aa82-0774443e3873))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C32") (unit 1)
         )
@@ -5238,19 +4935,19 @@
     )
   )
 
-  (symbol (lib_id "Connector:Conn_01x18_Socket") (at 27.94 170.18 0) (unit 1)
+  (symbol (lib_id "Connector:Conn_01x18_Socket") (at 31.75 233.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1c064926-5488-4ac0-be23-4f52f0d5e1ba)
-    (property "Reference" "J1" (at 29.21 170.18 0)
+    (property "Reference" "J1" (at 33.02 233.68 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "DISPLAY" (at 29.21 172.72 0)
+    (property "Value" "DISPLAY" (at 33.02 236.22 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_FFC-FPC:Hirose_FH12-18S-0.5SH_1x18-1MP_P0.50mm_Horizontal" (at 27.94 170.18 0)
+    (property "Footprint" "Connector_FFC-FPC:Hirose_FH12-18S-0.5SH_1x18-1MP_P0.50mm_Horizontal" (at 31.75 233.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 27.94 170.18 0)
+    (property "Datasheet" "~" (at 31.75 233.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "9" (uuid ffd1d299-d9ef-4105-8c88-c776f3b73065))
@@ -5272,7 +4969,7 @@
     (pin "12" (uuid e567d56a-7d19-44da-854e-aa7c76173d0b))
     (pin "4" (uuid bc3b2c67-9736-4887-9ffb-75f1be6a780a))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "J1") (unit 1)
         )
@@ -5297,7 +4994,7 @@
     )
     (pin "1" (uuid 7b30442e-526f-4cb7-ab13-6ea60f744513))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR018") (unit 1)
         )
@@ -5322,7 +5019,7 @@
     )
     (pin "1" (uuid 8daf55ca-22d7-4396-a00d-94e35f9b0600))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR053") (unit 1)
         )
@@ -5347,7 +5044,7 @@
     )
     (pin "1" (uuid 83db5432-2665-4cb0-8d83-256308370fda))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR054") (unit 1)
         )
@@ -5372,7 +5069,7 @@
     )
     (pin "1" (uuid 33238188-b4cd-4029-80fd-4fba8fe5c286))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR073") (unit 1)
         )
@@ -5380,19 +5077,44 @@
     )
   )
 
-  (symbol (lib_id "RF_GPS:MAX-M10M") (at 54.61 171.45 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 259d58b3-bd48-4d28-bf37-4ea504365744)
-    (property "Reference" "U2" (at 56.8041 189.23 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MAX-M10M" (at 56.8041 191.77 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "RF_GPS:ublox_MAX" (at 64.77 187.96 0)
+  (symbol (lib_id "power:GND") (at 281.94 118.11 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 2269a855-5033-4efa-88ca-7cca6ee28f78)
+    (property "Reference" "#PWR033" (at 275.59 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://content.u-blox.com/sites/default/files/documents/MAX-M10M_DataSheet_UBX-22028884.pdf" (at 54.61 171.45 0)
+    (property "Value" "GND" (at 276.86 118.11 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 281.94 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 281.94 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 58d1eb5c-634a-4b43-a55e-960bff268a2a))
+    (instances
+      (project "watch_pcb"
+        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
+          (reference "#PWR033") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "RF_GPS:MAX-M10M") (at 58.42 234.95 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 259d58b3-bd48-4d28-bf37-4ea504365744)
+    (property "Reference" "U2" (at 60.6141 252.73 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MAX-M10M" (at 60.6141 255.27 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "RF_GPS:ublox_MAX" (at 68.58 251.46 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://content.u-blox.com/sites/default/files/documents/MAX-M10M_DataSheet_UBX-22028884.pdf" (at 58.42 234.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "4" (uuid 3e9580c9-2433-413f-86ed-65d0fa2ec8a9))
@@ -5414,7 +5136,7 @@
     (pin "14" (uuid 18edc5bc-b083-4446-9810-8e41b585e757))
     (pin "9" (uuid 6e836770-a2ac-4b13-91d9-5ce1b53c4f94))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U2") (unit 1)
         )
@@ -5439,7 +5161,7 @@
     )
     (pin "1" (uuid f350b0a1-703c-42e3-a473-658efccc327a))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR055") (unit 1)
         )
@@ -5456,7 +5178,7 @@
     (property "Value" "22uF" (at 101.6 26.6763 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 99.06 25.4 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 99.06 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 99.06 25.4 0)
@@ -5465,7 +5187,7 @@
     (pin "2" (uuid df4c9823-9450-45a3-85a8-eb45756571b0))
     (pin "1" (uuid 2e967dd6-bfcf-47b7-b4c3-94070544ff49))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C2") (unit 1)
         )
@@ -5482,7 +5204,7 @@
     (property "Value" "R" (at 345.44 135.89 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 342.392 134.62 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 342.392 134.62 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 344.17 134.62 0)
@@ -5491,7 +5213,7 @@
     (pin "2" (uuid 8fdb9204-f25a-49e2-a733-d63a38d86634))
     (pin "1" (uuid caafb6ad-824f-41cc-94a2-da883ed8ad9a))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R36") (unit 1)
         )
@@ -5508,7 +5230,7 @@
     (property "Value" "0" (at 165.1 161.29 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 165.1 163.068 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 165.1 163.068 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 161.29 0)
@@ -5517,7 +5239,7 @@
     (pin "1" (uuid 5e38bbb1-603a-4036-b640-0a28046122c3))
     (pin "2" (uuid ddb61655-e326-4e49-ba4e-2a074cda94ac))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R27") (unit 1)
         )
@@ -5534,7 +5256,7 @@
     (property "Value" "10k" (at 347.98 87.63 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 347.98 89.408 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 347.98 89.408 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 347.98 87.63 0)
@@ -5543,7 +5265,7 @@
     (pin "1" (uuid 7f825ba2-0723-49cc-a47d-95bf1ca72efd))
     (pin "2" (uuid ce88c7c0-1e35-4892-abda-f7bed5924f74))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R19") (unit 1)
         )
@@ -5568,7 +5290,7 @@
     )
     (pin "1" (uuid 0daaed46-2300-4d0c-a34b-aa497bea9290))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR034") (unit 1)
         )
@@ -5593,7 +5315,7 @@
     )
     (pin "1" (uuid c0c52b64-7a5b-4d9b-ad56-1b315b8aa46e))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR064") (unit 1)
         )
@@ -5610,7 +5332,7 @@
     (property "Value" "0" (at 223.52 171.45 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 223.52 173.228 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 223.52 173.228 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 223.52 171.45 0)
@@ -5619,9 +5341,34 @@
     (pin "1" (uuid 797d5884-a23b-4973-8196-d4d4982dd73c))
     (pin "2" (uuid 94f75da3-076a-4375-8df3-e03b7dfc2d5b))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R24") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint_Small") (at 264.16 114.3 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 31fa0f2c-53e0-4311-8d2e-3aa896a48b31)
+    (property "Reference" "TP1" (at 265.43 113.03 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "BOOT" (at 265.43 115.57 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 269.24 114.3 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 269.24 114.3 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 5e0ff392-4ecb-40da-b060-7fe3fd3d1083))
+    (instances
+      (project "watch_pcb"
+        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
+          (reference "TP1") (unit 1)
         )
       )
     )
@@ -5636,7 +5383,7 @@
     (property "Value" "0" (at 165.1 171.45 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 165.1 173.228 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 165.1 173.228 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 171.45 0)
@@ -5645,7 +5392,7 @@
     (pin "1" (uuid 24879063-ea42-4969-98a1-684cc37d0afd))
     (pin "2" (uuid f0c14585-847f-4e1c-953a-58bf31bf1147))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R23") (unit 1)
         )
@@ -5670,9 +5417,34 @@
     )
     (pin "1" (uuid 76d6e829-8443-4275-b627-8ab94a23634c))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR060") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint_Small") (at 242.57 29.21 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 34ab8fdb-585c-405e-b662-caa6999f8336)
+    (property "Reference" "TP4" (at 243.84 27.94 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "BATT+" (at 243.84 30.48 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.5mm" (at 247.65 29.21 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 247.65 29.21 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 097892b0-e812-4a62-a17d-437fdfbbd515))
+    (instances
+      (project "watch_pcb"
+        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
+          (reference "TP4") (unit 1)
         )
       )
     )
@@ -5695,7 +5467,7 @@
     )
     (pin "1" (uuid 9d23ecfe-f38a-4e73-8837-165b610b6ced))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR059") (unit 1)
         )
@@ -5721,7 +5493,7 @@
     (pin "2" (uuid 08aec0b0-2150-43c3-8e18-70c15e38ce9c))
     (pin "1" (uuid 0eb51eb3-f307-4ef8-82ef-ce5fe8afc206))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "L3") (unit 1)
         )
@@ -5746,7 +5518,7 @@
     )
     (pin "1" (uuid 7291a037-86b4-4183-9d61-8ea68d3e1974))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR028") (unit 1)
         )
@@ -5771,7 +5543,7 @@
     )
     (pin "1" (uuid 3b42ce02-b7da-4900-ba9e-2312199fd13e))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR039") (unit 1)
         )
@@ -5788,7 +5560,7 @@
     (property "Value" "1k" (at 303.53 39.37 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 302.768 38.1 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 302.768 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 300.99 38.1 0)
@@ -5797,34 +5569,9 @@
     (pin "2" (uuid 18cfc8fb-1d2f-41b9-ada5-4edac78aec07))
     (pin "1" (uuid 4c27057b-8788-4485-b3c4-6a8d2a31bde6))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+5V") (at 46.99 86.36 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 43a39ff5-0fef-48c3-ab89-1b28ad165063)
-    (property "Reference" "#PWR033" (at 46.99 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 46.99 81.28 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 46.99 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 46.99 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid fb9dc87d-a977-4a8c-ac59-1aed97bcb1a0))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -5848,7 +5595,7 @@
     (pin "1" (uuid 906b11b7-9d10-4136-ae53-4f683d099ff3))
     (pin "2" (uuid e7efbba6-d4b0-4839-81d8-2ffe3c7bfafe))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C23") (unit 1)
         )
@@ -5873,7 +5620,7 @@
     )
     (pin "1" (uuid 8358b0f0-c050-407e-ac35-37e2985186bf))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR062") (unit 1)
         )
@@ -5890,7 +5637,7 @@
     (property "Value" "1uF" (at 168.91 105.4036 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 166.37 104.14 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 166.37 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 166.37 104.14 0)
@@ -5899,7 +5646,7 @@
     (pin "1" (uuid 36b148b0-0847-42b2-beea-4c9393524a3d))
     (pin "2" (uuid 84168ccb-fd8b-47e4-815d-7640cd4e1671))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C29") (unit 1)
         )
@@ -5916,7 +5663,7 @@
     (property "Value" "50k" (at 161.29 45.72 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 161.29 47.498 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 161.29 47.498 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 161.29 45.72 0)
@@ -5925,7 +5672,7 @@
     (pin "1" (uuid e131ad15-04d4-46c7-81d9-0e64a86f8bdb))
     (pin "2" (uuid 1e2ee7c3-d72b-4d26-8d37-be9521d97593))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R13") (unit 1)
         )
@@ -5950,35 +5697,9 @@
     )
     (pin "1" (uuid 41ae92ba-c2ab-4fea-9235-e05b3e717cb6))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR017") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C_Small") (at 49.53 88.9 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 4c90fa43-c9d0-4a25-acc8-9ac2fb13e893)
-    (property "Reference" "C17" (at 53.34 87.63 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "100nF" (at 53.34 90.17 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 49.53 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 49.53 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid b2f60dbd-5733-416e-a834-071303980086))
-    (pin "2" (uuid e1e7fa8f-e9bc-42a8-bc5a-a3db998dda91))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "C17") (unit 1)
         )
       )
     )
@@ -5993,7 +5714,7 @@
     (property "Value" "5.1k" (at 53.34 33.02 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 53.34 34.798 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 53.34 34.798 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 53.34 33.02 0)
@@ -6002,7 +5723,7 @@
     (pin "2" (uuid 5552b977-25f0-4426-bee4-8e7015ff2e09))
     (pin "1" (uuid e3a5fbf5-bffb-4b94-aa44-37cb6932c2bb))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R2") (unit 1)
         )
@@ -6019,7 +5740,7 @@
     (property "Value" "S80KS5123GABHI020" (at 374.65 74.93 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "PG-BGA-24-801" (at 351.79 82.55 0)
+    (property "Footprint" "S80KS5123GABHI020:PG-BGA-24-801" (at 351.79 82.55 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "S80KS5123GABHI020" (at 351.79 82.55 0)
@@ -6050,7 +5771,7 @@
     (pin "C5" (uuid 5b18ad04-cac9-49ab-965e-cd658c66aca8))
     (pin "D1" (uuid 27adc543-0ca8-4c3b-912c-0d437cf8e509))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U9") (unit 1)
         )
@@ -6076,7 +5797,7 @@
     (pin "2" (uuid 9aff89b0-534e-4dd4-a7f9-7192bb10a4c0))
     (pin "1" (uuid 5edd7bfa-cc27-4f6a-bc89-ddbdaabc62d6))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "D2") (unit 1)
         )
@@ -6101,35 +5822,9 @@
     )
     (pin "1" (uuid abb19c5f-60f9-467b-9f2e-162d4b62edf0))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR010") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 26.67 114.3 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 5465cdf2-57b1-41d0-ad65-05b214c3a3c0)
-    (property "Reference" "R9" (at 26.67 111.76 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "5.1k" (at 26.67 114.3 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 26.67 116.078 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 26.67 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid d1e565dd-6959-47a2-8652-ba6410a902fd))
-    (pin "1" (uuid 4649d368-4384-487f-928c-200402aad6c0))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "R9") (unit 1)
         )
       )
     )
@@ -6152,7 +5847,7 @@
     )
     (pin "1" (uuid 36f0d3d9-aa9d-4f5f-8302-04493499be50))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR061") (unit 1)
         )
@@ -6177,7 +5872,7 @@
     )
     (pin "1" (uuid 28c8a153-2ed5-43cc-9189-c56313714faa))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR076") (unit 1)
         )
@@ -6194,7 +5889,7 @@
     (property "Value" "1k" (at 218.44 68.58 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 215.392 67.31 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 215.392 67.31 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 217.17 67.31 0)
@@ -6203,7 +5898,7 @@
     (pin "2" (uuid d86fdd35-03cd-4101-94ac-552705deb161))
     (pin "1" (uuid eb56329e-65d0-424b-8574-a6fb72e95e01))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R16") (unit 1)
         )
@@ -6228,7 +5923,7 @@
     )
     (pin "1" (uuid 0a518d1f-deeb-4eed-9dea-12521c0407e0))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR05") (unit 1)
         )
@@ -6253,34 +5948,9 @@
     )
     (pin "1" (uuid 1cf9723e-2441-47cc-99f5-4bb9bb5ebffb))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR047") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 58.42 91.44 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6306fef3-7b29-46f7-b577-2915f27c76e1)
-    (property "Reference" "#PWR043" (at 64.77 91.44 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 62.23 91.44 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "" (at 58.42 91.44 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 58.42 91.44 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f5757339-8e4e-4ebc-a510-25027d5c2f7a))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -6295,7 +5965,7 @@
     (property "Value" "1k" (at 210.82 68.58 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 207.772 67.31 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 207.772 67.31 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 209.55 67.31 0)
@@ -6304,7 +5974,7 @@
     (pin "2" (uuid 7fc8c4d6-df18-4d68-ace9-a0e420c99141))
     (pin "1" (uuid 64c3c2e0-1ba6-484a-9222-9acb48449d07))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R15") (unit 1)
         )
@@ -6329,7 +5999,7 @@
     )
     (pin "1" (uuid f9319aaf-22e0-4273-a1df-bfa0e759f3ad))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR02") (unit 1)
         )
@@ -6354,7 +6024,7 @@
     )
     (pin "1" (uuid 129aaab6-cc11-4af9-b6ea-11b5d5b8da12))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR019") (unit 1)
         )
@@ -6371,7 +6041,7 @@
     (property "Value" "MX25LM51245GXDI00" (at 374.65 17.78 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "CSP24_6X8X1.2_MAC" (at 351.79 25.4 0)
+    (property "Footprint" "MX25UM51245G:CSP24_6X8X1.2_MAC" (at 351.79 25.4 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "https://www.macronix.com/Lists/Datasheet/Attachments/8967/MX25UM51245G,%201.8V,%20512Mb,%20v1.5.pdf" (at 351.79 25.4 0)
@@ -6402,7 +6072,7 @@
     (pin "C3" (uuid e41eacde-9b09-4e39-8951-63aef5d73126))
     (pin "C4" (uuid a56ff5a6-d3d1-4e25-882c-3dc91377045a))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U10") (unit 1)
         )
@@ -6419,7 +6089,7 @@
     (property "Value" "R" (at 339.09 135.89 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 336.042 134.62 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 336.042 134.62 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 337.82 134.62 0)
@@ -6428,7 +6098,7 @@
     (pin "2" (uuid 59aa9cfc-e8af-4acd-be1f-1575362c8ab8))
     (pin "1" (uuid 4590b768-583c-4b5d-b834-65882fbaf5ec))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R35") (unit 1)
         )
@@ -6453,7 +6123,7 @@
     )
     (pin "1" (uuid c865ae3b-fcf1-4b21-819b-95308ac32918))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR07") (unit 1)
         )
@@ -6470,7 +6140,7 @@
     (property "Value" "0" (at 223.52 168.91 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 223.52 170.688 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 223.52 170.688 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 223.52 168.91 0)
@@ -6479,9 +6149,34 @@
     (pin "1" (uuid 6825fb6b-48e5-4b0e-96dc-1ed72e7ac3c2))
     (pin "2" (uuid 48244a59-6f8d-4b8c-9e0f-e94a9f9ef3a1))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R25") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint_Small") (at 242.57 34.29 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 6d72a175-6329-4af2-8646-f316aad4aa46)
+    (property "Reference" "TP3" (at 243.84 33.02 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "BATT-" (at 243.84 35.56 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "TestPoint:TestPoint_Pad_2.5x2.5mm" (at 247.65 34.29 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 247.65 34.29 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 6dc243f0-8dfb-479f-81cf-0d1530c23bb4))
+    (instances
+      (project "watch_pcb"
+        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
+          (reference "TP3") (unit 1)
         )
       )
     )
@@ -6504,7 +6199,7 @@
     )
     (pin "1" (uuid 84a90cc6-6d16-4abb-86a5-3d311fe15425))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR020") (unit 1)
         )
@@ -6529,7 +6224,7 @@
     )
     (pin "1" (uuid c923d419-6c28-45e1-9633-38a5320ff975))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR037") (unit 1)
         )
@@ -6546,7 +6241,7 @@
     (property "Value" "470" (at 212.09 50.8 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 212.09 52.578 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 212.09 52.578 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 212.09 50.8 0)
@@ -6555,7 +6250,7 @@
     (pin "1" (uuid fc057363-b824-4d84-88b0-f9da3855ad29))
     (pin "2" (uuid 3e3d7304-5268-49b5-93ed-dc4634f9fbcd))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R14") (unit 1)
         )
@@ -6572,7 +6267,7 @@
     (property "Value" "1uF" (at 227.33 96.5136 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 224.79 95.25 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 224.79 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 224.79 95.25 0)
@@ -6581,7 +6276,7 @@
     (pin "1" (uuid aecffa14-fd86-4cbe-a0f2-7fbfd34a8011))
     (pin "2" (uuid 768177a6-ce13-41b4-b7e3-2403b0a17433))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C28") (unit 1)
         )
@@ -6606,7 +6301,7 @@
     )
     (pin "1" (uuid 07907529-adb9-4145-800f-a674a083c523))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR049") (unit 1)
         )
@@ -6623,7 +6318,7 @@
     (property "Value" "10uF" (at 151.13 27.9463 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 148.59 26.67 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 148.59 26.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 148.59 26.67 0)
@@ -6632,7 +6327,7 @@
     (pin "1" (uuid 71ef2626-3021-4be9-ad77-8014e0124811))
     (pin "2" (uuid be0a98b6-ed46-44c1-ba29-b2c5a34f589b))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C5") (unit 1)
         )
@@ -6657,7 +6352,7 @@
     )
     (pin "1" (uuid 5b21b851-117e-4c88-a4ef-626361961c30))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR022") (unit 1)
         )
@@ -6674,7 +6369,7 @@
     (property "Value" "10k" (at 160.02 102.87 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 160.02 104.648 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 160.02 104.648 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 160.02 102.87 0)
@@ -6683,7 +6378,7 @@
     (pin "1" (uuid 1a8e58eb-44cf-4c9a-a18e-fd38093cf52f))
     (pin "2" (uuid af9f29a8-b191-476e-b224-4110abd93be7))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R18") (unit 1)
         )
@@ -6708,7 +6403,7 @@
     )
     (pin "1" (uuid c9630beb-5983-4bba-9e8b-a9eabf45b0f1))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR06") (unit 1)
         )
@@ -6725,7 +6420,7 @@
     (property "Value" "4.7uF" (at 214.63 27.9463 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 212.09 26.67 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 212.09 26.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 212.09 26.67 0)
@@ -6734,7 +6429,7 @@
     (pin "2" (uuid 7c75628e-dccf-43a4-a366-da4bacbc1ea6))
     (pin "1" (uuid 529f7880-5b35-4f5a-a6a2-9d6aad1c2551))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C19") (unit 1)
         )
@@ -6751,7 +6446,7 @@
     (property "Value" "100k" (at 318.77 246.38 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 318.77 248.158 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 318.77 248.158 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 318.77 246.38 0)
@@ -6760,7 +6455,7 @@
     (pin "2" (uuid 819a6554-43f6-4f9a-b18e-594e37c31f1f))
     (pin "1" (uuid d80527a8-2b0a-4fb9-bae7-9e6a9af9615f))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R11") (unit 1)
         )
@@ -6785,7 +6480,7 @@
     )
     (pin "1" (uuid f927efd2-5d52-41e1-82fc-74a98f17e106))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR040") (unit 1)
         )
@@ -6802,7 +6497,7 @@
     (property "Value" "10nF" (at 57.15 22.86 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 53.34 21.59 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 53.34 21.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 53.34 21.59 0)
@@ -6811,34 +6506,9 @@
     (pin "1" (uuid 89a2fd95-079a-4f00-b532-4e39a3466663))
     (pin "2" (uuid 6f7d2b5a-0610-4629-835b-cb90b340557d))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C14") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 54.61 146.05 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 814440ef-608e-487a-8a2d-311aa47a7849)
-    (property "Reference" "#PWR027" (at 60.96 146.05 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 58.42 146.05 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "" (at 54.61 146.05 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 54.61 146.05 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a51d3ac1-deb0-46db-aba3-dce129f48fbe))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -6861,7 +6531,7 @@
     )
     (pin "1" (uuid 68f6879b-f5c8-4fe7-b4ea-b80307bd4c60))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR050") (unit 1)
         )
@@ -6878,7 +6548,7 @@
     (property "Value" "Micro_SD_Card" (at 376.555 210.82 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 405.13 219.71 0)
+    (property "Footprint" "5033981892:MOLEX_503398-1892" (at 405.13 219.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://katalog.we-online.de/em/datasheet/693072010801.pdf" (at 375.92 227.33 0)
@@ -6894,60 +6564,9 @@
     (pin "7" (uuid 19c97ac8-4bae-4f9f-8ee6-cc911cd0ad5f))
     (pin "9" (uuid 22d23842-66ce-43db-b365-b184132d1698))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "J2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Connector_Generic:Conn_01x02") (at 231.14 40.64 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 8671219b-00c3-405a-8828-dbb0b5655155)
-    (property "Reference" "J3" (at 233.68 40.64 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "BATTERY" (at 233.68 43.18 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 231.14 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 231.14 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid 9bfa328d-ce05-4318-812c-89efb7f00c6a))
-    (pin "1" (uuid dd36c60f-ef2c-4573-abbb-6a05b63a793e))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "J3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 21.59 99.06 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 8840a517-e0b0-497f-ad9b-20725ce943dc)
-    (property "Reference" "#PWR044" (at 21.59 92.71 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 21.59 93.98 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 21.59 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 21.59 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 701b70d6-c435-4ab0-8a37-58e1317aca7e))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "#PWR044") (unit 1)
         )
       )
     )
@@ -6970,7 +6589,7 @@
     )
     (pin "1" (uuid c8873deb-edd8-4c6c-93b3-66daac43bb48))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR046") (unit 1)
         )
@@ -6987,7 +6606,7 @@
     (property "Value" "10k" (at 334.01 212.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 330.962 210.82 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 330.962 210.82 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 332.74 210.82 0)
@@ -6996,7 +6615,7 @@
     (pin "1" (uuid c5d5df91-ae5c-418c-a614-a05896af71e4))
     (pin "2" (uuid 8a75e262-0e5f-4b6b-ae71-df79b20f1085))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R7") (unit 1)
         )
@@ -7013,7 +6632,7 @@
     (property "Value" "100nF" (at 402.59 156.21 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 393.7 154.94 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 393.7 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 393.7 154.94 0)
@@ -7022,7 +6641,7 @@
     (pin "1" (uuid 50c17d98-b8c8-4fe9-bdc9-91112af10177))
     (pin "2" (uuid a8961971-6a5a-4526-966c-2104a45cd4a7))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C37") (unit 1)
         )
@@ -7047,7 +6666,7 @@
     )
     (pin "1" (uuid a6594a08-4b56-4165-98b8-9bcb7fc94960))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR051") (unit 1)
         )
@@ -7072,35 +6691,9 @@
     )
     (pin "1" (uuid 8d6262da-06a3-4af7-985f-01432fe0239a))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR023") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 26.67 119.38 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 90c5ad2f-1367-4f09-86eb-f66180d94ffa)
-    (property "Reference" "R10" (at 26.67 116.84 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "5.1k" (at 26.67 119.38 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 26.67 121.158 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 26.67 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid f4f248e1-60e1-411c-b439-3e528c31e2ff))
-    (pin "1" (uuid 53ab7f1b-80c6-42b7-9270-9f70e64bef73))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "R10") (unit 1)
         )
       )
     )
@@ -7115,7 +6708,7 @@
     (property "Value" "10k" (at 340.36 212.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 337.312 210.82 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 337.312 210.82 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 339.09 210.82 0)
@@ -7124,7 +6717,7 @@
     (pin "1" (uuid 85780abe-dc78-4c1c-b977-59efef696d50))
     (pin "2" (uuid baed4435-8136-42bb-be26-40544406a20b))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R5") (unit 1)
         )
@@ -7149,7 +6742,7 @@
     )
     (pin "1" (uuid 122af1eb-49f0-43a9-9b44-19e30d03e5d2))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR01") (unit 1)
         )
@@ -7166,7 +6759,7 @@
     (property "Value" "100nF" (at 224.79 106.6863 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 222.25 105.41 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 222.25 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 222.25 105.41 0)
@@ -7175,7 +6768,7 @@
     (pin "2" (uuid b3df1625-7560-458e-9552-a9775f733111))
     (pin "1" (uuid 41c4f6b6-ff1b-47a9-bedf-9c3389b1e6dc))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C30") (unit 1)
         )
@@ -7192,7 +6785,7 @@
     (property "Value" "2k" (at 168.91 40.64 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 168.91 42.418 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 168.91 42.418 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 168.91 40.64 0)
@@ -7201,7 +6794,7 @@
     (pin "1" (uuid b55c27e8-9304-46b3-94c0-dc5dc544864f))
     (pin "2" (uuid 8e1cc94a-9afc-4ee9-b748-47477f75b9d7))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R12") (unit 1)
         )
@@ -7226,7 +6819,7 @@
     )
     (pin "1" (uuid 30d8fa69-37b7-442b-b16a-33fa3a710650))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR024") (unit 1)
         )
@@ -7251,7 +6844,7 @@
     )
     (pin "1" (uuid ce1f66b8-4a47-460d-8f3b-4bba45ae1825))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR032") (unit 1)
         )
@@ -7276,7 +6869,7 @@
     )
     (pin "1" (uuid b58eb02c-ead1-4fcd-96c5-fc1adc54ebe6))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR021") (unit 1)
         )
@@ -7314,7 +6907,7 @@
     (pin "5" (uuid 2f066d45-2492-4073-8929-6990c5fd488a))
     (pin "1" (uuid aca83438-d018-4b4f-a671-d2523ae2a93b))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U6") (unit 1)
         )
@@ -7331,7 +6924,7 @@
     (property "Value" "0" (at 165.1 176.53 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 165.1 178.308 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 165.1 178.308 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 176.53 0)
@@ -7340,7 +6933,7 @@
     (pin "1" (uuid bc840f5b-22e9-4329-b1ed-ab2d00a0eef5))
     (pin "2" (uuid 48a37609-519a-41b1-8ae4-0557195e8521))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R21") (unit 1)
         )
@@ -7365,7 +6958,7 @@
     )
     (pin "1" (uuid b513c04f-60e4-45be-b918-3be8a1454e55))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR058") (unit 1)
         )
@@ -7390,7 +6983,7 @@
     )
     (pin "1" (uuid 71d0d60f-1b32-4e33-aee0-4fff5a00cda1))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR011") (unit 1)
         )
@@ -7415,7 +7008,7 @@
     )
     (pin "1" (uuid dc9deca7-a84e-4494-a96e-44b4381bb0d9))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR056") (unit 1)
         )
@@ -7432,7 +7025,7 @@
     (property "Value" "0" (at 223.52 166.37 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 223.52 168.148 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 223.52 168.148 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 223.52 166.37 0)
@@ -7441,7 +7034,7 @@
     (pin "1" (uuid 27774002-a1e2-4869-8f39-57a3bb9761ef))
     (pin "2" (uuid b4690722-c4c8-444b-b415-8c614d4b2fb1))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R28") (unit 1)
         )
@@ -7449,25 +7042,25 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 227.33 185.42 90) (unit 1)
+  (symbol (lib_id "Device:R") (at 227.33 180.34 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a5471dbe-f44d-43d4-8bf2-2d95e7ce4d8d)
-    (property "Reference" "R31" (at 228.6 182.88 90)
+    (property "Reference" "R31" (at 228.6 177.8 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10k" (at 228.6 185.42 90)
+    (property "Value" "10k" (at 228.6 180.34 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 227.33 187.198 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 227.33 182.118 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 227.33 185.42 0)
+    (property "Datasheet" "~" (at 227.33 180.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "2" (uuid 366ae22f-66f9-4675-ad0d-a1847cfa96c2))
     (pin "1" (uuid 3073259c-bbfe-44f6-a047-b22380f7e52a))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R31") (unit 1)
         )
@@ -7475,24 +7068,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 54.61 191.77 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 58.42 255.27 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a6d480e9-2e09-45d1-9825-27b1800b3eaa)
-    (property "Reference" "#PWR025" (at 54.61 198.12 0)
+    (property "Reference" "#PWR025" (at 58.42 261.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 54.61 196.85 0)
+    (property "Value" "GND" (at 58.42 260.35 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 54.61 191.77 0)
+    (property "Footprint" "" (at 58.42 255.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 54.61 191.77 0)
+    (property "Datasheet" "" (at 58.42 255.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid eabe193a-4995-40bb-8031-9f4f732024f5))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR025") (unit 1)
         )
@@ -7509,7 +7102,7 @@
     (property "Value" "USB_C_Receptacle" (at 29.21 19.05 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Inset USB-C:CU3024PAAHLR001-NH_CVI" (at 33.02 49.53 0)
+    (property "Footprint" "DX07B024JJ1R1500:JAE_DX07B024JJ1R1500" (at 33.02 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" (at 33.02 49.53 0)
@@ -7541,7 +7134,7 @@
     (pin "B6" (uuid 6bac9a58-4937-4bb4-a615-a682a30fb129))
     (pin "B1" (uuid 7aa16a9f-276d-41a7-9b11-5e0a898397dc))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "J4") (unit 1)
         )
@@ -7558,7 +7151,7 @@
     (property "Value" "0" (at 223.52 161.29 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 223.52 163.068 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 223.52 163.068 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 223.52 161.29 0)
@@ -7567,7 +7160,7 @@
     (pin "1" (uuid 53d2b9a8-e755-4db4-baa4-f254c4096f6d))
     (pin "2" (uuid 901c13fb-852b-48b1-8ed4-40e64555fd72))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R30") (unit 1)
         )
@@ -7597,9 +7190,35 @@
     (pin "4" (uuid fc018c3e-62f9-4a07-ac4f-5ecd940df321))
     (pin "3" (uuid 5915fb1e-181c-49ea-9e8b-097bb1567607))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "MK1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 226.06 185.42 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid ade88ac5-fcfc-4f81-af6d-cec0dd732142)
+    (property "Reference" "R9" (at 226.06 182.88 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "10k" (at 226.06 185.42 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 226.06 187.198 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 226.06 185.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "2" (uuid 294d55b7-01fc-40b9-a554-dac2533ac654))
+    (pin "1" (uuid e530e500-8152-466f-9c05-ae8df613f026))
+    (instances
+      (project "watch_pcb"
+        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -7614,7 +7233,7 @@
     (property "Value" "10k" (at 346.71 212.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 343.662 210.82 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 343.662 210.82 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 345.44 210.82 0)
@@ -7623,7 +7242,7 @@
     (pin "1" (uuid 490ce77c-ba06-4bb0-9c2b-f921040e3b20))
     (pin "2" (uuid 06aa0aa8-f034-4f50-af40-6fe963f1ba3c))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R4") (unit 1)
         )
@@ -7649,7 +7268,7 @@
     (pin "1" (uuid d461570e-ffda-45e7-8c5a-320176e6373d))
     (pin "2" (uuid 1b0cf40c-a0b7-499b-a901-2187e34eae3b))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "D3") (unit 1)
         )
@@ -7666,7 +7285,7 @@
     (property "Value" "100nF" (at 303.5363 224.79 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 303.53 228.6 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 303.53 228.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 303.53 228.6 0)
@@ -7675,7 +7294,7 @@
     (pin "2" (uuid d610979c-84a7-4421-91a2-8e6d2b694ee1))
     (pin "1" (uuid c331be70-96db-49c9-9967-f6327e6f4906))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C15") (unit 1)
         )
@@ -7700,7 +7319,7 @@
     )
     (pin "1" (uuid e2b1dee4-cfd9-45cd-9a95-f30885c2fc79))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR072") (unit 1)
         )
@@ -7725,7 +7344,7 @@
     )
     (pin "1" (uuid 31a98384-914c-4a6a-a705-cee44a8006f8))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR03") (unit 1)
         )
@@ -7742,7 +7361,7 @@
     (property "Value" "10uF" (at 290.83 104.1463 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 288.29 102.87 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 288.29 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 288.29 102.87 0)
@@ -7751,7 +7370,7 @@
     (pin "2" (uuid 7f56f340-42d0-4e1e-ab41-6d5f5016a4b8))
     (pin "1" (uuid 662c2704-bfd6-4598-9a6d-f664ceb68ff0))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C35") (unit 1)
         )
@@ -7768,7 +7387,7 @@
     (property "Value" "5.1k" (at 53.34 27.94 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 53.34 29.718 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 53.34 29.718 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 53.34 27.94 0)
@@ -7777,7 +7396,7 @@
     (pin "2" (uuid 10be04a9-2eaa-4f20-988e-69b22c16cfb2))
     (pin "1" (uuid 91ef7232-0183-4f18-8758-c5433562551a))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R1") (unit 1)
         )
@@ -7794,7 +7413,7 @@
     (property "Value" "10k" (at 345.44 30.48 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 345.44 32.258 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 345.44 32.258 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 345.44 30.48 0)
@@ -7803,7 +7422,7 @@
     (pin "1" (uuid 153b7365-cfdf-419e-bdfd-fdf7f06d77b5))
     (pin "2" (uuid b03f5326-3837-4403-bc6a-f3f541d00d02))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R20") (unit 1)
         )
@@ -7828,7 +7447,7 @@
     )
     (pin "1" (uuid e2303eb8-af82-4a0f-b88e-a90ba7948484))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR042") (unit 1)
         )
@@ -7853,7 +7472,7 @@
     )
     (pin "1" (uuid 477c2b22-2694-4aa9-8cc6-123b68d0f7f7))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR067") (unit 1)
         )
@@ -7882,7 +7501,7 @@
     (pin "1" (uuid ef097196-9607-4460-ac00-93a4dc33c860))
     (pin "2" (uuid ce5d9dca-0f9c-4446-aeab-0c7ad58b9278))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U5") (unit 1)
         )
@@ -7907,7 +7526,7 @@
     )
     (pin "1" (uuid 45f480a4-d76f-45d4-9186-63dce3c1f4e9))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR013") (unit 1)
         )
@@ -7924,7 +7543,7 @@
     (property "Value" "22uF" (at 76.2 26.6763 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 73.66 25.4 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 73.66 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 73.66 25.4 0)
@@ -7933,7 +7552,7 @@
     (pin "1" (uuid 974ef85b-9225-46ff-8cd4-a403d7280a55))
     (pin "2" (uuid b99f5dcc-b8ef-47e0-a1f2-3f38e9bff2fe))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C1") (unit 1)
         )
@@ -7960,7 +7579,7 @@
     (pin "3" (uuid 46d3e82d-8c56-4ce4-9ab6-9f998e56ca54))
     (pin "2" (uuid d85581d0-335c-4211-9356-3510481ad34d))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U3") (unit 1)
         )
@@ -7977,7 +7596,7 @@
     (property "Value" "100nF" (at 339.09 151.13 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 347.98 149.86 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 347.98 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 347.98 149.86 0)
@@ -7986,7 +7605,7 @@
     (pin "1" (uuid f404e704-3d7b-438b-ae13-47ba87b870c8))
     (pin "2" (uuid f355ac7e-1ce9-4522-8f7b-6ebe8da6ad54))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C36") (unit 1)
         )
@@ -8011,35 +7630,9 @@
     )
     (pin "1" (uuid bd6024cf-2abf-4b9d-9760-0a8bbdb49b39))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR057") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C_Small") (at 21.59 101.6 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid c249be96-a347-4d2e-bdb9-1fd52812c6b2)
-    (property "Reference" "C21" (at 24.13 100.3363 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "100nF" (at 24.13 102.8763 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 21.59 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 21.59 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 60e6219a-77ae-4c54-8c3a-990fe4b8a1db))
-    (pin "2" (uuid 82eb4d2e-9f6c-4df1-8b2a-5273bf18f55e))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "C21") (unit 1)
         )
       )
     )
@@ -8054,7 +7647,7 @@
     (property "Value" "10k" (at 327.66 212.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 324.612 210.82 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 324.612 210.82 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 326.39 210.82 0)
@@ -8063,7 +7656,7 @@
     (pin "1" (uuid 9ae7dcbd-1ccc-44ba-a122-45ec4c87d2bf))
     (pin "2" (uuid 8d03a3c0-84d8-49d1-948f-1b22a2e8b0bf))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R8") (unit 1)
         )
@@ -8159,7 +7752,7 @@
     (pin "32" (uuid 7a341531-063d-4aae-a080-ab3eaa405fff))
     (pin "21" (uuid 8de54cd7-961b-4898-9fb1-e142c815a4e6))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U8") (unit 1)
         )
@@ -8184,7 +7777,7 @@
     )
     (pin "1" (uuid f4934b77-c298-4d71-8cd3-1eeb765ced52))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR08") (unit 1)
         )
@@ -8201,7 +7794,7 @@
     (property "Value" "100nF" (at 139.7 27.9463 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 137.16 26.67 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 137.16 26.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 137.16 26.67 0)
@@ -8210,7 +7803,7 @@
     (pin "1" (uuid 100addf0-39ef-4b81-b968-c130053f9424))
     (pin "2" (uuid 50c104ab-1b69-497e-a540-af1a29074b17))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C4") (unit 1)
         )
@@ -8235,7 +7828,7 @@
     )
     (pin "1" (uuid cb32984e-58de-4875-bab8-1a0f6924ad22))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR016") (unit 1)
         )
@@ -8252,7 +7845,7 @@
     (property "Value" "10uF" (at 275.59 29.21 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 279.4 27.94 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 279.4 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 279.4 27.94 0)
@@ -8261,7 +7854,7 @@
     (pin "2" (uuid 4f9b8fd0-5391-4b96-a5a1-2caf76bd462a))
     (pin "1" (uuid 9694ff99-0c63-4fcb-8891-8ad69c31c2e1))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C6") (unit 1)
         )
@@ -8278,7 +7871,7 @@
     (property "Value" "100nF" (at 384.81 170.18 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 381 168.91 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 381 168.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 381 168.91 0)
@@ -8287,7 +7880,7 @@
     (pin "1" (uuid 74f0a8da-9c7d-4914-8173-f8d33dd07b66))
     (pin "2" (uuid 12ac729a-3fc2-470a-bddc-ad0ac3f98eb8))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C11") (unit 1)
         )
@@ -8313,7 +7906,7 @@
     (pin "1" (uuid 2815c4d6-ff33-4348-a87c-b17162c67ccf))
     (pin "2" (uuid ae048fce-f38f-4cc9-8cd7-a93a7aec8241))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "TH1") (unit 1)
         )
@@ -8338,7 +7931,7 @@
     )
     (pin "1" (uuid ba5b0286-4722-468d-b173-cb1eb44aa134))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR038") (unit 1)
         )
@@ -8363,7 +7956,7 @@
     )
     (pin "1" (uuid 5a28101f-1d51-486e-b077-394a1abedc2b))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR04") (unit 1)
         )
@@ -8388,7 +7981,7 @@
     )
     (pin "1" (uuid 94dd5a8b-2782-4b52-95c6-60b21e2eb388))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR070") (unit 1)
         )
@@ -8396,24 +7989,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 24.13 134.62 90) (unit 1)
+  (symbol (lib_id "power:GND") (at 24.13 186.69 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ca356516-a412-49ed-b9ad-3e6b0f9f2123)
-    (property "Reference" "#PWR045" (at 30.48 134.62 0)
+    (property "Reference" "#PWR045" (at 30.48 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 29.845 135.255 90)
+    (property "Value" "GND" (at 29.845 187.325 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 24.13 134.62 0)
+    (property "Footprint" "" (at 24.13 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 24.13 134.62 0)
+    (property "Datasheet" "" (at 24.13 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 690569d6-10bd-4dfe-b610-890819866fa0))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR045") (unit 1)
         )
@@ -8438,7 +8031,7 @@
     )
     (pin "1" (uuid d30d3ac4-5ba0-48c4-9e19-294454b689d1))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR075") (unit 1)
         )
@@ -8464,7 +8057,7 @@
     (pin "1" (uuid c00a2657-821e-44eb-94c3-a6ed0afeb809))
     (pin "2" (uuid 2e098315-946d-46c8-8554-b431476ad343))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C22") (unit 1)
         )
@@ -8489,7 +8082,7 @@
     )
     (pin "1" (uuid 586a90d6-a92c-4bca-94d1-9ee06994ca56))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR052") (unit 1)
         )
@@ -8506,7 +8099,7 @@
     (property "Value" "1uF" (at 118.11 27.9463 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 115.57 26.67 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 115.57 26.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 115.57 26.67 0)
@@ -8515,7 +8108,7 @@
     (pin "1" (uuid c3b811ef-b3dc-4f48-9ca9-14f123062aa4))
     (pin "2" (uuid 6d0a176f-dd47-4556-84e6-71ba43c0d02f))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C3") (unit 1)
         )
@@ -8532,7 +8125,7 @@
     (property "Value" "0" (at 223.52 163.83 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 223.52 165.608 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 223.52 165.608 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 223.52 163.83 0)
@@ -8541,7 +8134,7 @@
     (pin "1" (uuid 4d5d8176-9781-4ce5-8f1c-e1dbdef90fdb))
     (pin "2" (uuid 4880780f-2521-4f1c-9f88-b74aad31b032))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R29") (unit 1)
         )
@@ -8555,10 +8148,10 @@
     (property "Reference" "R33" (at 234.95 116.84 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 234.95 119.38 0)
+    (property "Value" "2k" (at 234.95 119.38 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 231.902 118.11 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 231.902 118.11 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 233.68 118.11 0)
@@ -8567,7 +8160,7 @@
     (pin "2" (uuid 524ef206-bd4e-404a-abbc-2206a9b37556))
     (pin "1" (uuid 76a27e92-36c9-4384-a69c-fd314be181b4))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R33") (unit 1)
         )
@@ -8592,7 +8185,7 @@
     )
     (pin "1" (uuid aec4f354-2d1d-439c-9f7d-f58c4efbe472))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR068") (unit 1)
         )
@@ -8609,7 +8202,7 @@
     (property "Value" "0" (at 165.1 173.99 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 165.1 175.768 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 165.1 175.768 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 173.99 0)
@@ -8618,7 +8211,7 @@
     (pin "1" (uuid 69b9440a-90a2-4679-9e87-87d18549b287))
     (pin "2" (uuid f59c464a-50e7-4ee5-aed6-9fd941825e66))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R22") (unit 1)
         )
@@ -8643,7 +8236,7 @@
     )
     (pin "1" (uuid 68adcf0a-c3e9-4876-b5ce-6628b1d241db))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR063") (unit 1)
         )
@@ -8679,7 +8272,7 @@
     (pin "2" (uuid 654d7f5e-0041-4173-b004-df0a353618cd))
     (pin "7" (uuid e3c4e839-8dd2-4f5a-909f-3f1d0de02999))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U1") (unit 1)
         )
@@ -8696,7 +8289,7 @@
     (property "Value" "10nF" (at 236.22 87.6363 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 233.68 86.36 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 233.68 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 233.68 86.36 0)
@@ -8705,7 +8298,7 @@
     (pin "2" (uuid 1e6f7028-2f79-40fe-9c42-720292967c4c))
     (pin "1" (uuid 48ba258c-ec5e-4021-a20a-2953859f4ca8))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C26") (unit 1)
         )
@@ -8730,7 +8323,7 @@
     )
     (pin "1" (uuid 8f991409-829a-40d9-9fe5-1a19ea590ef1))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR036") (unit 1)
         )
@@ -8755,7 +8348,7 @@
     )
     (pin "1" (uuid cb0995a0-ab41-461f-8532-67b558ef074c))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR065") (unit 1)
         )
@@ -8780,7 +8373,7 @@
     )
     (pin "1" (uuid 53b5c51e-cb6f-4971-9039-943ffb3c8d62))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR048") (unit 1)
         )
@@ -8797,7 +8390,7 @@
     (property "Value" "100nF" (at 392.43 194.31 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 393.7 191.77 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 393.7 191.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 393.7 191.77 0)
@@ -8806,7 +8399,7 @@
     (pin "2" (uuid f15308da-b586-4678-9119-04c15977b090))
     (pin "1" (uuid 2aa5ae14-e3c2-4365-b332-c5eee89159c0))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C10") (unit 1)
         )
@@ -8823,7 +8416,7 @@
     (property "Value" "100nF" (at 236.22 106.6863 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 233.68 105.41 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 233.68 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 233.68 105.41 0)
@@ -8832,7 +8425,7 @@
     (pin "2" (uuid 0170a888-4dc9-4bd2-8e53-b526036d99ac))
     (pin "1" (uuid acaf8041-20ce-4d32-8d78-8f1d5636904c))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C31") (unit 1)
         )
@@ -8849,7 +8442,7 @@
     (property "Value" "0" (at 165.1 163.83 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 165.1 165.608 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 165.1 165.608 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 163.83 0)
@@ -8858,7 +8451,7 @@
     (pin "1" (uuid 974694ac-4a69-429e-bd67-e378993b6822))
     (pin "2" (uuid 78dea4e3-c050-4c4a-a5fa-82fcb46e63a7))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R26") (unit 1)
         )
@@ -8875,7 +8468,7 @@
     (property "Value" "100nF" (at 270.51 104.1463 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 267.97 102.87 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 267.97 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 267.97 102.87 0)
@@ -8884,7 +8477,7 @@
     (pin "2" (uuid 3e94b2f5-a8d1-4f67-86ac-ae21a1e49844))
     (pin "1" (uuid b250b9b0-36d4-4dda-8286-7a29337027d5))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C33") (unit 1)
         )
@@ -8909,7 +8502,7 @@
     )
     (pin "1" (uuid d16b4821-75db-4e15-ad90-2e463adb899b))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR029") (unit 1)
         )
@@ -8934,7 +8527,7 @@
     )
     (pin "1" (uuid 673e17dd-b8bc-487d-a138-f52754d9f8c3))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR09") (unit 1)
         )
@@ -8951,7 +8544,7 @@
     (property "Value" "10uF" (at 177.8063 20.32 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 172.72 19.05 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 172.72 19.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 172.72 19.05 0)
@@ -8960,7 +8553,7 @@
     (pin "1" (uuid b911fff1-713e-4a3c-8e91-8383e1e3e11d))
     (pin "2" (uuid 11ded841-9e8e-4741-82fe-f683e1e7808d))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C18") (unit 1)
         )
@@ -8977,7 +8570,7 @@
     (property "Value" "100nF" (at 290.83 24.13 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 294.64 22.86 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 294.64 22.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 294.64 22.86 0)
@@ -8986,7 +8579,7 @@
     (pin "2" (uuid ce68d433-af6b-4f85-8dbf-d35195c97016))
     (pin "1" (uuid a427b3c0-c91d-4514-8338-f99f9309088a))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C8") (unit 1)
         )
@@ -9011,7 +8604,7 @@
     )
     (pin "1" (uuid 8c1ddcb1-81b8-42d8-9afc-eb270d32894c))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR035") (unit 1)
         )
@@ -9036,7 +8629,7 @@
     )
     (pin "1" (uuid f4a5dbb0-81a2-4ba3-ba54-03eb245353d0))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR015") (unit 1)
         )
@@ -9061,7 +8654,7 @@
     )
     (pin "1" (uuid a7d86984-483e-4528-9608-9c70b6d704c7))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR012") (unit 1)
         )
@@ -9087,7 +8680,7 @@
     (pin "2" (uuid 1a978b2d-c795-424b-afbf-cca3ecb98847))
     (pin "1" (uuid 62c2bd48-e5b8-420a-958d-78a757c6af5d))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "L1") (unit 1)
         )
@@ -9112,7 +8705,7 @@
     )
     (pin "1" (uuid 0ffb0fab-8a8d-4ed9-ba5f-25745b493a46))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR014") (unit 1)
         )
@@ -9129,7 +8722,7 @@
     (property "Value" "10k" (at 353.06 212.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 350.012 210.82 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 350.012 210.82 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 351.79 210.82 0)
@@ -9138,9 +8731,34 @@
     (pin "1" (uuid f6f16ab5-3ef9-452d-a4c4-df220b3b48dd))
     (pin "2" (uuid 72dda6ea-3314-4a49-8001-aa14da8e0745))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R6") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint_Small") (at 281.94 118.11 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid f2f078cf-9541-484e-8115-7e1ef581988f)
+    (property "Reference" "TP2" (at 283.21 116.84 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "GND" (at 283.21 119.38 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 287.02 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 287.02 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 89c60c99-c72f-413f-9d72-ba574e2cfd79))
+    (instances
+      (project "watch_pcb"
+        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
+          (reference "TP2") (unit 1)
         )
       )
     )
@@ -9155,7 +8773,7 @@
     (property "Value" "1uF" (at 384.81 175.26 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 381 173.99 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 381 173.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 381 173.99 0)
@@ -9164,7 +8782,7 @@
     (pin "1" (uuid a9a0cb56-1590-4453-a7fd-56bdf3f8ce85))
     (pin "2" (uuid a6b78bb4-015d-43ae-951f-30c5bee584c7))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C12") (unit 1)
         )
@@ -9189,35 +8807,9 @@
     )
     (pin "1" (uuid 1b693760-1d35-4fca-bf73-a28ad2a5c250))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR074") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 158.75 148.59 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid f3fd200d-f446-4647-93f4-6a0fc728e175)
-    (property "Reference" "R17" (at 158.75 151.13 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "499" (at 158.75 148.59 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 158.75 150.368 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 158.75 148.59 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid 99715d73-cbec-43b0-ba36-cb213727c93b))
-    (pin "1" (uuid 6614c54b-e466-4e45-88c9-ae6f8c50b631))
-    (instances
-      (project "V2"
-        (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
-          (reference "R17") (unit 1)
         )
       )
     )
@@ -9240,7 +8832,7 @@
     )
     (pin "1" (uuid 4352e1b7-9773-4989-9ea4-8c9c26886e68))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR069") (unit 1)
         )
@@ -9257,7 +8849,7 @@
     (property "Value" "100nF" (at 275.59 24.13 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 279.4 22.86 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 279.4 22.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 279.4 22.86 0)
@@ -9266,7 +8858,7 @@
     (pin "2" (uuid cb9a6541-a157-4d83-93a9-2af4b14fd31f))
     (pin "1" (uuid 538aece7-971c-4206-a5fd-76d1ab0b6cb5))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C7") (unit 1)
         )
@@ -9292,7 +8884,7 @@
     (pin "2" (uuid 497f4208-f60b-46d3-a94d-bf897585a1cf))
     (pin "1" (uuid ec5aa001-b4d5-45bb-80f7-eadd214e32d7))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "L2") (unit 1)
         )
@@ -9309,7 +8901,7 @@
     (property "Value" "10k" (at 321.31 212.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 318.262 210.82 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 318.262 210.82 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 320.04 210.82 0)
@@ -9318,7 +8910,7 @@
     (pin "1" (uuid d2d848cd-74a8-4a40-8ea9-411457526d72))
     (pin "2" (uuid 10c34e7a-293e-4ce2-84dc-691eaf17f258))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "R32") (unit 1)
         )
@@ -9343,7 +8935,7 @@
     )
     (pin "1" (uuid 296e2cb2-c52e-4d5a-9504-94684aa93e20))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "#PWR071") (unit 1)
         )
@@ -9360,7 +8952,7 @@
     (property "Value" "LSM6DSV16XTR" (at 372.11 132.08 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "LGA14L_LSM6_STM" (at 350.52 137.16 0)
+    (property "Footprint" "LSM6DSV16XTR:LGA14L_LSM6_STM" (at 350.52 137.16 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "https://www.st.com/content/ccc/resource/technical/document/datasheet/group3/47/03/b2/44/47/32/4b/76/DM00741844/files/DM00741844.pdf/jcr:content/translations/en.DM00741844.pdf" (at 350.52 137.16 0)
@@ -9381,7 +8973,7 @@
     (pin "1" (uuid 264effa3-676e-4602-9c96-43cd60adc980))
     (pin "9" (uuid 3d5b2b84-566e-46ef-b8e1-769d37025602))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "U11") (unit 1)
         )
@@ -9398,7 +8990,7 @@
     (property "Value" "4.7uF" (at 290.83 29.21 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 294.64 27.94 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 294.64 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 294.64 27.94 0)
@@ -9407,7 +8999,7 @@
     (pin "2" (uuid fd83b337-aeba-4e28-a356-1e1030251c84))
     (pin "1" (uuid c6c4159b-baa1-4a78-8221-b7ad4e903220))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C9") (unit 1)
         )
@@ -9424,7 +9016,7 @@
     (property "Value" "100nF" (at 236.22 96.5136 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 233.68 95.25 0)
+    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 233.68 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 233.68 95.25 0)
@@ -9433,7 +9025,7 @@
     (pin "1" (uuid fa64900d-c5ec-4537-a2b9-f25adc2ac339))
     (pin "2" (uuid c4d50cc8-ee9a-4858-9740-a0ccbf8bde5e))
     (instances
-      (project "V2"
+      (project "watch_pcb"
         (path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
           (reference "C27") (unit 1)
         )
