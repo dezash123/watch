@@ -1,9 +1,7 @@
-use esp_hal::{clock::{ClockControl, Clocks}, delay::Delay, peripherals::Peripherals, system::SystemParts};
+use esp_hal::{clock::{ClockControl, Clocks}, delay::Delay, peripherals::Peripherals};
+use esp_hal::prelude::_esp_hal_system_SystemExt;
 
 pub struct Kernel {
-    pub peripherals: Peripherals, 
-    pub system: SystemParts<'static>,
-    pub cocks: Clocks<'static>,
     pub delay: Delay,
 }
 
@@ -12,11 +10,8 @@ impl Kernel {
         let peripherals = Peripherals::take();
         let system = peripherals.SYSTEM.split();
         let cocks = ClockControl::max(system.clock_control).freeze();
-        let mut delay = Delay::new(&cocks);
+        let delay = Delay::new(&cocks);
         Self {
-            peripherals,
-            system,
-            cocks,
             delay,
         }
     }
