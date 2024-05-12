@@ -1,3 +1,3 @@
 pub trait Daemon {
-    fn main_loop();
+    fn main_loop(&self);
 }

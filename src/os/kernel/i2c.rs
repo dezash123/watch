@@ -45,7 +45,7 @@ impl<'d, N: Instance> I2CBus<'d, N> {
             request_buffer: VecDeque::new(),
         }
     }
-    pub async fn request_read(&mut self, device_address: u8, memory_address: &'d [u8], buffer: &'d mut [u8]) {
+    pub async fn read(&mut self, device_address: u8, memory_address: &'d [u8], buffer: &'d mut [u8]) {
        self.request_buffer.push_back(
             I2CRequest{
                  device_address,

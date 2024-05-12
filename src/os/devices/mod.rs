@@ -1,4 +1,5 @@
 pub mod display;
+pub mod text_display;
 pub mod touch_input;
 pub mod button;
 pub mod microphone;

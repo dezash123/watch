@@ -4,7 +4,7 @@ pub struct SleepTracker {
 }
 
 impl Daemon for SleepTracker {
-    fn main_loop() {
+    fn main_loop(&self) {
         
     }
 }
