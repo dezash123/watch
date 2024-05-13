@@ -1,28 +1,31 @@
 mod consts;
-use core::str::FromStr;
 
 use alloc::string::String;
 use consts::*;
+use embassy_embedded_hal::shared_bus::asynch::i2c::I2cDevice;
+use embassy_sync::blocking_mutex::raw::NoopRawMutex;
 use embassy_time::Timer;
-use crate::os::{devices::text_display::TextDisplay, Os};
+use esp_hal::{i2c::{Instance, I2C}, Async};
+use embedded_hal_async::i2c::I2c;
+use crate::os::devices::text_display::TextDisplay;
 
-pub struct Pcf8574t {
-    os: &'static Os<'static>,
+pub struct Pcf8574t<N: Instance + 'static> {
+    i2c: I2cDevice<'static, NoopRawMutex, I2C<'static, N, Async>>,
     top_string: String,
     bottom_string: String,
 }
 
-impl Pcf8574t {
-    pub async fn new(os: &'static Os<'static>) -> Self {
-        let new = Self{
-            os,
+impl<N: Instance> Pcf8574t<N> {
+    pub async fn new(i2c: I2cDevice<'static, NoopRawMutex, I2C<'static, N, Async>>) -> Self {
+        let mut new = Self {
+            i2c,
             top_string: String::new(),
             bottom_string: String::new(),
         };
         new.init().await;
         new
     }
-    pub async fn init(&self) {
+    pub async fn init(&mut self) {
         self.lcd_write(0x03, 0x00).await;
         self.lcd_write(0x03, 0x00).await;
         self.lcd_write(0x03, 0x00).await;
@@ -36,26 +39,26 @@ impl Pcf8574t {
         self.lcd_write(LCD_ENTRYMODESET | LCD_ENTRYLEFT, 0x00).await;
         Timer::after_millis(200).await;
     }
-    async fn write_cmd(&self, data: u8) {
-
+    async fn write_cmd(&mut self, data: u8) {
+        self.i2c.write(LCD_ADDRESS, &[data]).await.unwrap();
     }
-    async fn lcd_strobe(&self, data: u8) {
+    async fn lcd_strobe(&mut self, data: u8) {
         self.write_cmd(data | EN | LCD_BACKLIGHT).await;
         Timer::after_micros(1500).await;
         self.write_cmd((data & !EN) | LCD_BACKLIGHT).await;
         Timer::after_micros(300).await;
     }
-    async fn lcd_write_four_bits(&self, data: u8) {
+    async fn lcd_write_four_bits(&mut self, data: u8) {
         self.write_cmd(data | LCD_BACKLIGHT).await;
         self.lcd_strobe(data).await;
     }
-    async fn lcd_write(&self, cmd: u8, mode: u8) {
+    async fn lcd_write(&mut self, cmd: u8, mode: u8) {
         self.lcd_write_four_bits(mode | (cmd & 0xF0)).await;
         self.lcd_write_four_bits(mode | ((cmd << 4) & 0xF0)).await;
     }
 }
 
-impl TextDisplay for Pcf8574t {
+impl<N: Instance> TextDisplay for Pcf8574t<N> {
     async fn display_on_line(&mut self, string: String, line: u8) {
         if line == 1 {
             self.top_string = string.clone();

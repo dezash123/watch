@@ -9,7 +9,7 @@ pub mod devices;
 pub mod apps;
 
 pub struct Os<'a> {
-    kernel: Kernel<'static>,
+    kernel: Kernel,
     daemons: VecDeque<&'a dyn Daemon>,
     // current_program: Program,
 }
