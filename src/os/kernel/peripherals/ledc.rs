@@ -15,11 +15,11 @@ use esp_hal::prelude::_esp_hal_ledc_channel_ChannelIFace;
 
 use crate::util::math;
 
-pub struct LEDController {
+pub struct LedDevice {
     ledc: LEDC<'static>,
 }
 
-impl LEDController {
+impl LedDevice {
     fn new(mut ledc: LEDC<'static>) -> Self {
         ledc.set_global_slow_clock(LSGlobalClkSource::APBClk);
         Self {

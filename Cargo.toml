@@ -1,11 +1,13 @@
+cargo-features = ["edition2024"]
 [package]
 name = "watch-os"
 version = "0.1.0"
-authors = ["Desmond Mehta"]
+authors = ["Desmond Mehta <desmondmehta@gmail.com>"]
 edition = "2021"
 license = "Apache-2.0"
 
 [dependencies]
+async-trait = "0.1.80"
 embassy-embedded-hal = "0.1.0"
 embassy-executor = "0.5.0"
 embassy-sync = "0.5.0"
@@ -22,6 +24,8 @@ esp-hal = { version = "0.17.0", features = [
     "place-spi-driver-in-ram",
     "embassy",
     "embassy-time-systick-16mhz",
+    "embassy-executor-thread",
+    "embassy-executor-interrupt",
 ] }
 esp-println = { version = "0.9.0", features = [
     "esp32s3", 
@@ -61,6 +65,11 @@ smoltcp = { version = "0.11.0", default-features = false, features = [
     "socket-udp",
 ] }
 static_cell = "2.1.0"
+deku = { version = "0.16", default-features = false, features = ["alloc", "const_generics"] }
+# bitvec = { version = "1.0.1", default-features = false, features = ["alloc", "atomic"] }
+# radium = { version = "1.1.0", features = ["portable-atomic"] }
+radium = "0.7"
+
 
 [profile.dev]
 # Rust debug is too slow. 

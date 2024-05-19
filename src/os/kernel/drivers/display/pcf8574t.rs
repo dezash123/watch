@@ -1,13 +1,16 @@
 mod consts;
 
+use embedded_hal_async::i2c::I2c;
 use alloc::string::String;
+use async_trait::async_trait;
 use consts::*;
 use embassy_embedded_hal::shared_bus::asynch::i2c::I2cDevice;
 use embassy_sync::blocking_mutex::raw::NoopRawMutex;
 use embassy_time::Timer;
 use esp_hal::{i2c::{Instance, I2C}, Async};
-use embedded_hal_async::i2c::I2c;
-use crate::os::devices::text_display::TextDisplay;
+use alloc::boxed::Box;
+
+use super::TextDisplay;
 
 pub struct Pcf8574t<N: Instance + 'static> {
     i2c: I2cDevice<'static, NoopRawMutex, I2C<'static, N, Async>>,
@@ -22,7 +25,7 @@ impl<N: Instance> Pcf8574t<N> {
             top_string: String::new(),
             bottom_string: String::new(),
         };
-        new.init().await;
+        new.init();
         new
     }
     pub async fn init(&mut self) {
@@ -58,6 +61,7 @@ impl<N: Instance> Pcf8574t<N> {
     }
 }
 
+#[async_trait(?Send)]
 impl<N: Instance> TextDisplay for Pcf8574t<N> {
     async fn display_on_line(&mut self, string: String, line: u8) {
         if line == 1 {
