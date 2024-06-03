@@ -14,3 +14,6 @@ impl Time {
     }
 }
             
+pub trait Measurement {
+    fn get_std_dev(&self) -> f64;
+}

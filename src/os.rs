@@ -1,14 +1,11 @@
-extern crate alloc;
-
 use esp_hal::entry;
 use core::mem::MaybeUninit;
-use alloc::collections::VecDeque;
 use embassy_executor::Spawner;
 use esp_backtrace as _;
 use esp_hal::macros::main;
 use esp_println::println;
 
-use self::{apps::daemon::Daemon, kernel::custom_kernels::v1kernel::V1Kernel};
+use self::kernel::{custom_kernels::v1_kernel::V1Kernel, Kernel};
 
 #[global_allocator]
 static ALLOCATOR: esp_alloc::EspHeap = esp_alloc::EspHeap::empty();
@@ -23,31 +20,43 @@ fn init_heap() {
 }
 
 pub mod kernel;
-pub mod apps;
+pub mod program_management;
 
-pub struct Os<'a> {
-    kernel: V1Kernel,
-    daemons: VecDeque<&'a dyn Daemon>,
+pub enum ProgramCommand {
+    KysNow,
+    Kys,
+}
+
+pub trait Error {}
+
+pub struct Os<T: Kernel> {
+    kernel: T,
+
     // current_program: Program,
 }
 
-impl<'a> Os<'a> {
-    async fn new() -> Self {
-        let kernel = V1Kernel::new().await;
-         
+impl<T: Kernel> Os<T> {
+    async fn init() -> Self {
+        let kernel = T::new().await.unwrap();
         Self {
             kernel,
-            daemons: VecDeque::new(),
+        }
+    }
+    async fn start(&mut self) -> ! {
+        loop {
+            self.kernel.manage_inputs().await.unwrap();
+            
+            self.kernel.manage_outputs().await.unwrap();
         }
     }
 }
 
 #[main]
-async fn start(_spawner: Spawner) {
+async fn start(_spawner: Spawner) -> ! {
     init_heap();
-    
     esp_println::logger::init_logger_from_env();
     log::info!("Logger is setup");
     println!("Hello world!");
+    Os::init().start()
 }
 

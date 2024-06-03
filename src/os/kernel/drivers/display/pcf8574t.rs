@@ -4,22 +4,24 @@ use embedded_hal_async::i2c::I2c;
 use alloc::string::String;
 use async_trait::async_trait;
 use consts::*;
-use embassy_embedded_hal::shared_bus::asynch::i2c::I2cDevice;
+use embassy_embedded_hal::shared_bus::asynch::i2c::I2cDevice as I2cContainer;
 use embassy_sync::blocking_mutex::raw::NoopRawMutex;
 use embassy_time::Timer;
 use esp_hal::{i2c::{Instance, I2C}, Async};
 use alloc::boxed::Box;
 
+use crate::os::kernel::{drivers::{imu::lis3mdl::consts::DEVICE_ADDRESS, Device, DeviceError, SetupError}, interfaces::i2c::I2cDevice};
+
 use super::TextDisplay;
 
 pub struct Pcf8574t<N: Instance + 'static> {
-    i2c: I2cDevice<'static, NoopRawMutex, I2C<'static, N, Async>>,
+    i2c: I2cContainer<'static, NoopRawMutex, I2C<'static, N, Async>>,
     top_string: String,
     bottom_string: String,
 }
 
 impl<N: Instance> Pcf8574t<N> {
-    pub async fn new(i2c: I2cDevice<'static, NoopRawMutex, I2C<'static, N, Async>>) -> Self {
+    pub async fn new(i2c: I2cContainer<'static, NoopRawMutex, I2C<'static, N, Async>>) -> Self {
         let mut new = Self {
             i2c,
             top_string: String::new(),
@@ -58,6 +60,25 @@ impl<N: Instance> Pcf8574t<N> {
     async fn lcd_write(&mut self, cmd: u8, mode: u8) {
         self.lcd_write_four_bits(mode | (cmd & 0xF0)).await;
         self.lcd_write_four_bits(mode | ((cmd << 4) & 0xF0)).await;
+    }
+}
+
+#[async_trait(?Send)]
+impl<N: Instance> Device for Pcf8574t<N> {
+    async fn enable(&mut self) -> Result<(), DeviceError> {
+        Ok(())
+    }
+    async fn enabled(&self) -> bool { true }
+    async fn disable(&mut self) -> Result<(), DeviceError> {
+        Err(DeviceError::Setup(SetupError::NoDisable))
+    }
+    async fn estimated_current_draw(&mut self) -> f64 {0f64}
+}
+
+impl<N: Instance> I2cDevice<N> for Pcf8574t<N> {
+    const DEVICE_ADDRESS: u8 = DEVICE_ADDRESS;
+    fn get_bus(&mut self) -> &mut I2cContainer<'static, NoopRawMutex, I2C<'static, N, Async>> {
+        &mut self.i2c
     }
 }
 

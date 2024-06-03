@@ -1,8 +1,9 @@
-cargo-features = ["edition2024"]
+# cargo-features = ["edition2024"]
 [package]
 name = "watch-os"
 version = "0.1.0"
 authors = ["Desmond Mehta <desmondmehta@gmail.com>"]
+repository = "https://github.com/dezash123/watch-os"
 edition = "2021"
 license = "Apache-2.0"
 
@@ -66,10 +67,16 @@ smoltcp = { version = "0.11.0", default-features = false, features = [
 ] }
 static_cell = "2.1.0"
 deku = { version = "0.16", default-features = false, features = ["alloc", "const_generics"] }
-# bitvec = { version = "1.0.1", default-features = false, features = ["alloc", "atomic"] }
-# radium = { version = "1.1.0", features = ["portable-atomic"] }
-radium = "0.7"
-
+radium = "1.1.0"
+thiserror-no-std = "2.0"
+uom = { version = "0.35.0", default-features = false, features = [
+        "autoconvert", # automatic base unit conversion.
+        "usize", "u8", "u16", "u32", "u64", "u128", # Unsigned integer storage types.
+        "isize", "i8", "i16", "i32", "i64", "i128", # Signed integer storage types.
+        "f32", "f64", # Floating point storage types.
+        "si", # Built-in SI system and std library support.
+        "serde", # Serde support.
+] }
 
 [profile.dev]
 # Rust debug is too slow. 

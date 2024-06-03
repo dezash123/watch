@@ -1,3 +1,5 @@
+use async_trait::async_trait;
+use alloc::boxed::Box;
 use embassy_embedded_hal::shared_bus::asynch::i2c::I2cDevice;
 use embassy_sync::{blocking_mutex::raw::NoopRawMutex, mutex::Mutex};
 use esp_hal::{clock::ClockControl, gpio::IO, i2c::I2C, peripherals::{Peripherals, I2C0, I2C1}, Async};
@@ -5,17 +7,17 @@ use fugit::RateExtU32;
 use static_cell::StaticCell;
 use esp_hal::prelude::_esp_hal_system_SystemExt;
 
-use crate::os::kernel::drivers::display::pcf8574t::Pcf8574t;
+use crate::os::kernel::{drivers::{display::pcf8574t::Pcf8574t, Device}, Kernel, KernelError};
 
 pub static I2C0_BUS: StaticCell<Mutex<NoopRawMutex, I2C<I2C0, Async>>> = StaticCell::new();
 pub static I2C1_BUS: StaticCell<Mutex<NoopRawMutex, I2C<I2C1, Async>>> = StaticCell::new();
 
 pub struct V1Kernel {
-    text_display: Option<Pcf8574t<I2C0>>,
 }
 
-impl V1Kernel {
-    pub async fn new() -> Self {
+#[async_trait(?Send)]
+impl Kernel for V1Kernel {
+    async fn new() -> Self {
         let peripherals = Peripherals::take();
         let system = peripherals.SYSTEM.split();
         let cocks = ClockControl::max(system.clock_control).freeze();
@@ -46,10 +48,15 @@ impl V1Kernel {
         let i2c1_bus = Mutex::new(i2c1);
         let i2c1_bus = I2C1_BUS.init(i2c1_bus);
 
-        let text_display = Some(Pcf8574t::new(I2cDevice::new(i2c0_bus)).await);
+        let text_display = Pcf8574t::new(I2cDevice::new(i2c0_bus)).await;
 
         Self {
-            text_display,
         }
+    }
+    async fn manage_inputs(&mut self) -> Result<(), KernelError> {
+        Ok(())
+    }
+    async fn manage_outputs(&mut self) -> Result<(), KernelError> {
+        Ok(())
     }
 }
