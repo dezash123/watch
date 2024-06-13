@@ -61,4 +61,9 @@
   (pad "E3" smd circle (at 0 2) (size 0.4 0.4) (property pad_prop_bga) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp ee77503b-ee8c-432f-af08-dd9fe20a1a50))
   (pad "E4" smd circle (at 1 2) (size 0.4 0.4) (property pad_prop_bga) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 29ad54ad-117b-41d6-ba1c-8137703b9f1f))
   (pad "E5" smd circle (at 2 2) (size 0.4 0.4) (property pad_prop_bga) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 01432051-7196-4306-9492-79e6826c952d))
+  (model "${KIPRJMOD}/custom-lib/models/MX25LM51245GXDI00.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
 )
