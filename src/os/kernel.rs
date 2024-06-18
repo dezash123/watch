@@ -5,6 +5,7 @@ pub mod drivers;
 pub mod interfaces;
 pub mod custom_kernels;
 
+#[async_trait(?Send)]
 pub trait Kernel {
     async fn new() -> Result<Self, KernelError>;
     async fn manage_inputs(&mut self) -> Result<(), KernelError>;

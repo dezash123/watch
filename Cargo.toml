@@ -66,8 +66,6 @@ smoltcp = { version = "0.11.0", default-features = false, features = [
     "socket-udp",
 ] }
 static_cell = "2.1.0"
-deku = { version = "0.16", default-features = false, features = ["alloc", "const_generics"] }
-radium = "1.1.0"
 thiserror-no-std = "2.0"
 uom = { version = "0.35.0", default-features = false, features = [
         "autoconvert", # automatic base unit conversion.

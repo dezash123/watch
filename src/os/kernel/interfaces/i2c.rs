@@ -28,3 +28,5 @@ pub trait I2cDevice<BUS: Instance + 'static>: Device {
         Ok(buffer)
     }
 }
+
+
