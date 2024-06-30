@@ -469,7 +469,7 @@
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
-      "intersheets_ref_show": false,
+      "intersheets_ref_show": true,
       "intersheets_ref_suffix": "",
       "junction_size_choice": 3,
       "label_size_ratio": 0.375,
@@ -496,6 +496,18 @@
     [
       "b7b86b03-b0df-4b4e-be1d-606605306dad",
       ""
+    ],
+    [
+      "ac5844b2-70bd-47c8-b13a-e6d4bebf0e4d",
+      "USB and Power"
+    ],
+    [
+      "1b63e572-6cfa-40af-85d8-9bf18f565a95",
+      "MCU and Memory"
+    ],
+    [
+      "019b6fa9-e816-4b8f-82b5-e4d967e6d33b",
+      "IO"
     ]
   ],
   "text_variables": {}
