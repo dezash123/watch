@@ -75,6 +75,8 @@ uom = { version = "0.35.0", default-features = false, features = [
         "si", # Built-in SI system and std library support.
         "serde", # Serde support.
 ] }
+hashbrown = "0.14.5"
+bitflags = "2.5.0"
 
 [profile.dev]
 # Rust debug is too slow. 
