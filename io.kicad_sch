@@ -1655,6 +1655,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 11005969-5752-43cb-9ad6-cae063ea0c3b)
   )
+  (text "0xD5 or 0xD7\n2.6uA off\n100uA normal\n650uA highest performance"
+    (at 69.85 182.88 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 18fe91b3-1b66-4648-8d1d-93a8a9c24116)
+  )
   (text "esp design guidelines" (at 233.68 162.56 0)
     (effects (font (size 1.27 1.27)) (justify left bottom) (href "https://docs.espressif.com/projects/esp-sr/en/latest/esp32s3/audio_front_end/Espressif_Microphone_Design_Guidelines.html"))
     (uuid 6877a6c7-1be4-4c70-be61-9e64c25eb00a)
