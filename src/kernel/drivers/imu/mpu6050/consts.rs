@@ -1,0 +1,9 @@
+pub const DEVICE_ADDRESS: u8 = 0x68;
+pub const GYRO_CONFIG: u8 = 27;
+pub const ACCEL_CONFIG: u8 = 28;
+pub const ACCEL_OUT_START: u8 = 59;
+pub const GYRO_OUT_START: u8 = 67;
+pub const TEMP_OUT_START: u8 = 65;
+pub const PWR_MGMT_1: u8 = 107;
+pub const PWR_MGMT_2: u8 = 108;
+pub const WHO_AM_I: u8 = 117;

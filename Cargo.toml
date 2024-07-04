@@ -1,0 +1,93 @@
+# cargo-features = ["edition2024"]
+[package]
+name = "watch-os"
+version = "0.1.0"
+authors = ["Desmond Mehta <desmondmehta@gmail.com>"]
+repository = "https://github.com/dezash123/watch-os"
+edition = "2021"
+license = "Apache-2.0"
+
+[dependencies]
+async-trait = "0.1.80"
+embassy-embedded-hal = "0.1.0"
+embassy-executor = "0.5.0"
+embassy-sync = "0.5.0"
+embassy-time = "0.3.0"
+esp-backtrace = { version = "0.11.0", features = [
+    "esp32s3",
+    "exception-handler",
+    "panic-handler",
+    "println",
+] }
+esp-hal = { version = "0.17.0", features = [ 
+    "esp32s3",
+    "async",
+    "place-spi-driver-in-ram",
+    "embassy",
+    "embassy-time-systick-16mhz",
+    "embassy-executor-thread",
+    "embassy-executor-interrupt",
+] }
+esp-println = { version = "0.9.0", features = [
+    "esp32s3", 
+    "log",
+] }
+log = { version = "0.4.20" }
+esp-alloc = { version = "0.3.0" }
+embedded-svc = { version = "0.26.1", default-features = false, features = [] }
+embedded-graphics = { version = "0.8.1", features = [
+    "nalgebra_support",
+    "defmt",
+] }
+embedded-hal = "1.0.0"
+embedded-hal-async = "1.0.0"
+embedded-io = "0.6.1"
+esp-wifi = { version = "0.5.1", features = [
+    "esp32s3",
+    "phy-enable-usb",
+    "utils",
+    "wifi-default",
+] }
+fugit = "0.3.7"
+heapless = { version = "0.8.0", default-features = false }
+nalgebra = { version = "0.32.5", default-features = false, features = [
+    "libm",
+    "alloc"
+]}
+smoltcp = { version = "0.11.0", default-features = false, features = [
+    "medium-ethernet",
+    "proto-dhcpv4",
+    "proto-igmp",
+    "proto-ipv4",
+    "socket-dhcpv4",
+    "socket-icmp",
+    "socket-raw",
+    "socket-tcp",
+    "socket-udp",
+] }
+static_cell = "2.1.0"
+thiserror-no-std = "2.0"
+uom = { version = "0.35.0", default-features = false, features = [
+        "autoconvert", # automatic base unit conversion.
+        "usize", "u8", "u16", "u32", "u64", "u128", # Unsigned integer storage types.
+        "isize", "i8", "i16", "i32", "i64", "i128", # Signed integer storage types.
+        "f32", "f64", # Floating point storage types.
+        "si", # Built-in SI system and std library support.
+        "serde", # Serde support.
+] }
+hashbrown = "0.14.5"
+bitflags = "2.5.0"
+
+[profile.dev]
+# Rust debug is too slow. 
+# For debug builds always builds with some optimization
+opt-level = "s"
+
+[profile.release]
+codegen-units = 1 # LLVM can perform better optimizations using a single thread
+debug = 2
+debug-assertions = false
+incremental = false
+lto = 'fat'
+opt-level = 's'
+overflow-checks = false
