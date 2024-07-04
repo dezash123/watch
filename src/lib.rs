@@ -6,7 +6,8 @@
 
 extern crate alloc;
 
-mod util;
-mod os;
+mod kernel;
+mod os_programs;
+mod process_management;
 mod tests;
-mod apps;
+mod util;

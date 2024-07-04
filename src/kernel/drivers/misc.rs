@@ -1,9 +1,9 @@
-use embassy_embedded_hal::shared_bus::I2cDeviceError;
-use esp_hal::i2c;
 use alloc::boxed::Box;
 use async_trait::async_trait;
+use embassy_embedded_hal::shared_bus::I2cDeviceError;
+use esp_hal::i2c;
 
-use super::{DeviceError, Sensor};
+use super::DeviceError;
 
 #[async_trait(?Send)]
 pub trait Thermometer: Sensor {
