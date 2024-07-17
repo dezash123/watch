@@ -1,0 +1,35 @@
+[package]
+name = "drivers"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# allow no panic guarantees
+no-panic = "0.1.3"
+# necessary for graphics driver
+embedded-graphics-core = "0.4"
+# might make own but using this for now
+linked_list_allocator = "0.10.5"
+# units of mesaurement
+uom = { version = "0.36.0", default-features = false, features = [
+  "autoconvert", # automatic base unit conversion.
+  "usize", "u8", "u16", "u32", "u64", "u128", # Unsigned integer storage types.
+  "isize", "i8", "i16", "i32", "i64", "i128", # Signed integer storage types.
+  "f32", "f64", # Floating point storage types.
+  "si", # Built-in SI system support.
+  "serde", # Serde support.
+] }
+# embedded hal api
+embedded-hal = { version = "1.0.0", features = ["defmt-03"]}
+# embedded-hal bus traits
+embedded-hal-bus = { version = "0.2", default-features = false, features = [
+  "async",
+  "defmt-03",
+]}
+# embedded hal async stuff
+embedded-hal-async = { version = "1.0.0", features = [ "defmt-03" ] }
+# defmt
+defmt = { version = "0.3.8", features = ["alloc"] }
+# error handling
+thiserror-no-std = "2.0.2"
+heapless = "0.8.0"

@@ -1,0 +1,91 @@
+[package]
+name = "os"
+version = "0.1.0"
+authors = ["Desmond Mehta <desmondmehta@gmail.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+# custom kernel
+embedded-kernel = { path = "../embedded-kernel" }
+# embedded graphics
+embedded-graphics = { version = "0.8.1", features = [
+    "nalgebra_support",
+    "defmt",
+] }
+# allows use of framebuffer instead of individual pixel updates
+embedded-graphics-framebuf = "0.5.0"
+# fps tracking
+embedded-fps = "0.1.0"
+
+
+# provides backtraces, includes panic and exception handler
+esp-backtrace = { version = "0.12.0", features = [
+  # support s3
+  "esp32s3",
+  # include exception and panic handler
+  "exception-handler",
+  "panic-handler",
+  # use defmt for error logging
+  "defmt",
+  # make errors red
+  "colors",
+  # stop everything on panic
+  "halt-cores",
+] }
+# the HAL
+esp-hal = { version = "0.18.0", features = [ "esp32s3" ] }
+# enables printing and logging
+esp-println = { version = "0.9.1", features = [
+  "esp32s3", 
+  # enables colors and logging api
+  "log", 
+  "colors",
+  # use defmt
+  "defmt-espflash",
+] }
+log = { version = "0.4.21" }
+# TODO: keep documenting these
+embedded-svc = { version = "0.26.1", default-features = false, features = [] }
+
+embedded-io = "0.6.1"
+
+esp-wifi = { version = "0.6.0", features = [
+    "esp32s3",
+    "phy-enable-usb",
+    "utils",
+    "wifi",
+] }
+
+heapless = { version = "0.8.0", default-features = false }
+
+smoltcp = { version = "0.11.0", default-features = false, features = [
+    "medium-ethernet",
+    "proto-dhcpv4",
+    "proto-igmp",
+    "proto-ipv4",
+    "socket-dhcpv4",
+    "socket-icmp",
+    "socket-raw",
+    "socket-tcp",
+    "socket-udp",
+] }
+
+defmt = { version = "0.3.8", features = ["alloc"] }
+
+esp-alloc = { version = "0.3.0" }
+
+[profile.dev]
+# Rust debug is too slow.
+# For debug builds always builds with some optimization
+opt-level = "s"
+
+[profile.release]
+# change to 1 later
+codegen-units = 16 # LLVM can perform better optimizations using a single thread
+debug = 2
+debug-assertions = false
+incremental = false
+lto = 'fat'
+opt-level = 's'
+overflow-checks = false
