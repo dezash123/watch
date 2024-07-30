@@ -212,7 +212,7 @@
     (property "Value" "BQ25638" (at 0 25.4 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 1.27 0 0)
+    (property "Footprint" "custom-lib:Texas_DSBGA-30_2.0x2.4mm_Layout5x6_P0.4mm" (at 1.27 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25638.pdf?ts=1717946147567&ref_url=https%253A%252F%252Fwww.ti.com%252Fbattery-management%252Fcharger-ics%252Fproducts.html" (at 0 0 0)

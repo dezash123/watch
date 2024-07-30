@@ -33,3 +33,6 @@ defmt = { version = "0.3.8", features = ["alloc"] }
 # error handling
 thiserror-no-std = "2.0.2"
 heapless = "0.8.0"
+
+libc = "0.2.0"
+
