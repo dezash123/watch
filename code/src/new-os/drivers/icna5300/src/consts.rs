@@ -1,3 +1,12 @@
+pub const SET_SINGLE_SPI: u8 = 0xFF; 
+pub const SET_QUAD_SPI: u8 = 0x38;
+pub const CMD_WRITE: u8 = 0x02;
+pub const CMD_READ: u8 = 0x03;
+
+pub const X_START: u32 = 0x0006;
+pub const X_END: u32 = 0x01D7;
+pub const Y_END: u32 = 0x01D1;
+
 pub const SET_CMD_PAGE: u8 = 0xFE; // set CMD page (CMD Page Switch)
 pub const SET_SPI_MODE: u8 = 0xC4; //SPI mode select (SetSPIMode)
 pub const COLMOD: u8 = 0x3A; // color mode select
