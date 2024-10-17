@@ -657,6 +657,10 @@
     [
       "019b6fa9-e816-4b8f-82b5-e4d967e6d33b",
       "IO"
+    ],
+    [
+      "3bf8886e-ecc0-44cc-b41e-06e7ec0d4e75",
+      "STM MCU"
     ]
   ],
   "text_variables": {}

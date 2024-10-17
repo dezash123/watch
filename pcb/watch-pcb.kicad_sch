@@ -4515,6 +4515,44 @@
 		)
 	)
 	(sheet
+		(at 27.94 171.45)
+		(size 40.64 22.86)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3bf8886e-ecc0-44cc-b41e-06e7ec0d4e75")
+		(property "Sheetname" "STM MCU"
+			(at 27.94 170.7384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "stm_mcu.kicad_sch"
+			(at 27.94 194.8946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "watch-pcb"
+				(path "/b7b86b03-b0df-4b4e-be1d-606605306dad"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 40.64 45.72)
 		(size 24.13 41.91)
 		(fields_autoplaced yes)
