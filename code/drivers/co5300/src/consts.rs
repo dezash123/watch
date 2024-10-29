@@ -1,7 +1,8 @@
 
 // my code; switched to values from arduino driver
-/*
+
 pub const SET_CMD_PAGE: u8 = 0xFE; // set CMD page (CMD Page Switch)
+/*
 pub const SET_SPI_MODE: u8 = 0xC4; //SPI mode select (SetSPIMode)
 pub const COLMOD: u8 = 0x3A; // color mode select
 pub const TEON: u8 = 0x35; // 0 = vsync, 1 = v+hsync
@@ -17,21 +18,22 @@ pub const RAMWR_CONTINUOUS: u8 = 0x3C;
 pub const ALLPON: u8 = 0x23;
 pub const SPA_ID: u8 = 0x15;
 pub const LPA_ID: u8 = 0x29;
+*/
 
 // instructions
 pub const SET_SINGLE_SPI: u8 = 0xFF;
 pub const SET_DUAL_SPI: u8 = 0x3B;
 pub const SET_QUAD_SPI: u8 = 0x38;
 pub const PIXEL_WRITE_4_WIRE_6_ADR: u8 = 0x12;
-*/
+
 
 // stolen from arduino driver
 pub const MAXWIDTH: u16 = 480;  ///< CO5300 max TFT width
 pub const MAXHEIGHT: u16 = 480; ///< CO5300 max TFT width
 ///
-pub const RST_DELAY: u8 = 200;    ///< delay ms wait for reset finish
-pub const SLPIN_DELAY: u8 = 120;  ///< delay ms wait for sleep in finish
-pub const SLPOUT_DELAY: u8 = 120; ///< delay ms wait for sleep out finish
+pub const RST_DELAY_MS: u32 = 200;    ///< delay ms wait for reset finish
+pub const SLPIN_DELAY_MS: u32 = 120;  ///< delay ms wait for sleep in finish
+pub const SLPOUT_DELAY_MS: u32 = 120; ///< delay ms wait for sleep out finish
 ///
 pub const C_NOP: u8 = 0x00;          // nop
 pub const C_SWRESET: u8 = 0x01;      // Software Reset
