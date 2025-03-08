@@ -30,10 +30,13 @@ pub const PIXEL_WRITE_4_WIRE_6_ADR: u8 = 0x12;
 // stolen from arduino driver
 pub const MAXWIDTH: u16 = 480;  ///< CO5300 max TFT width
 pub const MAXHEIGHT: u16 = 480; ///< CO5300 max TFT width
-///
-pub const RST_DELAY_MS: u32 = 200;    ///< delay ms wait for reset finish
-pub const SLPIN_DELAY_MS: u32 = 120;  ///< delay ms wait for sleep in finish
-pub const SLPOUT_DELAY_MS: u32 = 120; ///< delay ms wait for sleep out finish
+/// all times are double minima
+pub const RST_DOWN_US: u64 = 20; 
+// pub const RST_TIME_SLPIN_MS: u64 = 10;
+// pub const RST_TIME_SLPOUT_MS: u64 = 200; // min is 120
+pub const RST_TIME_MS: u64 = 200; // ion trust u china
+// pub const RST_TO_SLPOUT_MS: u64 = 30; // could be 10 but need to also wait 10 after vdd
+pub const SLPIN_TO_RST_MS: u64 = 166;
 ///
 pub const C_NOP: u8 = 0x00;          // nop
 pub const C_SWRESET: u8 = 0x01;      // Software Reset

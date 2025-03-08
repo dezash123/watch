@@ -1,24 +1,27 @@
-use core::error::Error;
-use anyhow::Result;
+// use anyhow::Result;
 use embedded_graphics_core::{geometry::{OriginDimensions, Point, Size}, pixelcolor::{Rgb565, Rgb888}};
 use embedded_graphics_framebuf::FrameBuf;
 use embedded_hal::digital::OutputPin;
-use embedded_hal_async::{delay::DelayNs, digital::Wait, spi::SpiDevice};
+use embedded_hal_async::{delay::DelayNs, digital::Wait, spi::SpiBus};
 use heapless::Vec;
 use embedded_graphics_core::pixelcolor::RgbColor;
-use crate::consts::*;
+use crate::{consts::*, error::Co5300Error};
+use embassy_time::Timer;
 
 pub trait SupportedColor {}
 impl SupportedColor for Rgb888 {}
 impl SupportedColor for Rgb565 {}
 
+pub const X_OFFS: u16 = 6;
+pub const Y_OFFS: u16 = 0;
 
-pub struct Co5300<SPI, TE, RST, TMR, RGB> {
+pub struct Co5300<SPI, TE, RST, RGB> {
     spi: SPI,
-    tearing_enable: TE,
+    sync: TE,
     reset: RST,
-    delay: TMR,
     colormode: RGB,
+    brightness: u8,
+    asleep: bool,
 }
 
 const fn convert_4wire_to_1wire(four_wire: u8) -> [u8; 4] {
@@ -33,20 +36,21 @@ const fn convert_4wire_to_1wire(four_wire: u8) -> [u8; 4] {
         output.to_be_bytes()
 }
 
-impl<SPI: SpiDevice, TE: Wait, RST: OutputPin, TMR: DelayNs, RGB: SupportedColor> Co5300<SPI, TE, RST, TMR, RGB> 
+impl<SPI, TE, RST, RGB, SE, PE> Co5300<SPI, TE, RST, RGB> 
     where
-        SPI::Error: Send + Sync + Error + 'static,
-        RST::Error: Send + Sync + Error + 'static,
+    SPI: SpiBus<Error = SE>, 
+    RST: OutputPin<Error = PE>,
+    TE: Wait,
+    RGB: SupportedColor,
 {
-    pub async fn new(spi: SPI, tearing_enable: TE, reset: RST, delay: TMR, colormode: RGB) -> Result<Self> {
-        Self { spi, tearing_enable, reset, delay, colormode }.init().await
+    pub type Error = Co5300Error<SE, PE>;
+    pub async fn new(spi: SPI, sync: TE, reset: RST, colormode: RGB) -> Result<Self, Self::Error> {
+        Self { spi, sync, reset, colormode, brightness: 0, asleep: false }.init().await
     }
-    async fn init(mut self) -> Result<Self> {
-        self.reset().await?;
-        self.set_4wire().await?;
 
-        self.send_command(C_SLPOUT).await?;
-        self.delay.delay_ms(SLPOUT_DELAY_MS).await;
+    async fn init(mut self) -> Result<Self, Self::Error> {
+        self.wake().await?;
+        self.set_4wire().await?;
 
         self.send_param_command(SET_CMD_PAGE, [0]).await?;
 
@@ -73,63 +77,92 @@ impl<SPI: SpiDevice, TE: Wait, RST: OutputPin, TMR: DelayNs, RGB: SupportedColor
         Ok(self)
     }
 
-    async fn set_1wire(&mut self) -> Result<()> {
-        self.spi.write(&[SET_SINGLE_SPI; 4]).await?;
+    pub async fn wake(&mut self) -> Result<(), Co5300Error<SE, PE>> {
+        self.reset().await?;
+        self.send_command(C_SLPOUT).await?;
+        Timer::after_millis(RST_TIME_MS).await;
+        self.asleep = false;
         Ok(())
     }
     
-    async fn set_4wire(&mut self) -> Result<()> {
+    pub async fn sleep(&mut self) -> Result<(), Self::Error> {
+        self.send_command(C_SLPIN).await?;
+        Timer::after_millis(SLPIN_TO_RST_MS).await;
+        self.reset.set_low().map_err(Co5300Error::PinError)?;
+        self.asleep = true;
+        Ok(())
+    }
+    
+    async fn set_1wire(&mut self) -> Result<(), Self::Error> {
+        self.spi.write(&[SET_SINGLE_SPI; 4]).await.map_err(Co5300Error::SpiError)?;
+        Ok(())
+    }
+    
+    async fn set_4wire(&mut self) -> Result<(), Self::Error> {
         self.set_1wire().await?;
-        self.spi.write(&[SET_QUAD_SPI]).await?;
+        self.spi.write(&[SET_QUAD_SPI]).await.map_err(Co5300Error::SpiError)?;
         Ok(())
     }
 
-    async fn reset(&mut self) -> Result<()> {
-        self.reset.set_high()?;
-        self.delay.delay_us(RST_DELAY_MS).await;
-
-
+    pub async fn all_pixels_on(&mut self) -> Result<(), Self::Error> {
+        self.send_command(C_ALLPON).await?;
         Ok(())
-        // digitalWrite(_rst, HIGH);
-        // delay(10);
-        // digitalWrite(_rst, LOW);
-        // delay(CO5300_RST_DELAY);
-        // digitalWrite(_rst, HIGH);
-        // delay(CO5300_RST_DELAY);
     }
 
-    // async fn set_pixel_location(&mut self, pixel: Point) -> Result<()> {
-    //     let x: [u8; 2] = ((pixel.x - 6) as u16).to_be_bytes();
-    //     let y: [u8; 2] = (pixel.y as u16).to_be_bytes();
+    pub async fn all_pixels_off(&mut self) -> Result<(), Self::Error> {
+        self.send_command(C_ALLPOFF).await?;
+        Ok(())
+    }
 
-    //     self.send_param_command(CASET, x).await?;
-    //     self.send_param_command(RASET, y).await
-    // }
+    pub async fn set_brightness(&mut self, brightness: u8) -> Result<(), Self::Error> {
+        self.send_param_command(W_WDBRIGHTNESSVALNOR, [brightness]).await?;
+        Ok(())
+    }
+
+    pub async fn reset(&mut self) -> Result<(), Self::Error> {
+        self.reset.set_low().map_err(Co5300Error::PinError)?;
+        Timer::after_micros(RST_DOWN_US).await;
+        self.reset.set_high().map_err(Co5300Error::PinError)?;
+        Timer::after_millis(RST_TIME_MS).await;
+        Ok(())
+    }
+    
+    const fn pixel_setup(pixel: Point) -> ([u8; 2], [u8; 2]) {
+        let x: [u8; 2] = (pixel.x as u16 + X_OFFS).to_be_bytes();
+        let y: [u8; 2] = (pixel.y as u16 + Y_OFFS).to_be_bytes();
+        (x, y)
+    }
+    async fn set_pixel_location(&mut self, pixel: Point) -> Result<(), Self::Error> {
+        let pixels_out = Self::pixel_setup(pixel);
+        self.send_param_command(W_CASET, pixels_out.0).await?;
+        self.send_param_command(W_PASET, pixels_out.1).await
+    }
     // async fn first_color_write(&mut self, color: Rgb888) -> Result<()> {
     //     self.send_param_command(RAMWR_START, [color.r(), color.g(), color.b()]).await
     // }
 
     #[inline]
-    async fn send_command(&mut self, command: u8) -> Result<()> {
-        self.spi.write(&[0x02u8.to_be(), 0x00, command.to_be(), 0x00]).await?;
+    async fn send_command(&mut self, command: u8) -> Result<(), Self::Error> {
+        self.spi.write(&[0x02u8.to_be(), 0x00, command.to_be(), 0x00]).await.map_err(Co5300Error::SpiError)?;
         Ok(())
     }
     #[inline]
-    async fn send_param_command<const N: usize>(&mut self, command: u8, parameters: [u8; N]) -> Result<()>
+    async fn send_param_command<const N: usize>(&mut self, command: u8, parameters: [u8; N]) -> Result<(), Self::Error>
     where
         [u8; N + 4]:,
     {
         let mut data: Vec<u8, { N + 4 }> = Vec::from_slice(&[0x02u8.to_be(), 0x00, command.to_be(), 0x00]).unwrap();
         data.extend_from_slice(&parameters).unwrap();
-        self.spi.write(&data.into_array::<{N + 4}>().unwrap()).await?;
+        self.spi.write(&data.into_array::<{N + 4}>().unwrap()).await.map_err(Co5300Error::SpiError)?;
         Ok(())
     }
-    // async fn flush(&mut self) -> Result<()> {
-    //     Ok(())
-    // }
 }
 
-impl<SPI, TE, RST, TMR, RGB> OriginDimensions for Co5300<SPI, TE, RST, TMR, RGB> {
+impl<SPI: SpiBus, TE: Wait, RST: OutputPin> Co5300<SPI, TE, RST, Rgb888> {
+    
+}
+
+impl<SPI, TE, RST, RGB> OriginDimensions for Co5300<SPI, TE, RST, RGB> {
     fn size(&self) -> Size {
         Size::new(466, 466)
     }

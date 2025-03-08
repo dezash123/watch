@@ -31,13 +31,16 @@ embedded-storage = "0.3.1"
 static_cell = "2"
 chrono = { version = "^0.4", default-features = false }
 
-# defmt = "0.3"
+embedded-graphics = { version = "0.8.1", default-features = false, features = ["defmt", "nalgebra_support"] }
+
 defmt = { version = "0.3", features = ["encoding-rzcobs"] }
-# defmt-rtt = "0.4"
 defmt-brtt = { version = "0.1", default-features = false, features = ["rtt"] }
 panic-probe = { version = "0.3", features = ["print-defmt"] }
 
 # rtic = { version = "2.0.0", features = [ "thumbv7-backend" ] }
+
+chsc6417 = { path = "src/drivers/chsc6417" }
+co5300 = { path = "src/drivers/co5300" }
 
 # cargo build/run
 [profile.dev]
@@ -84,3 +87,5 @@ overflow-checks = false # <-
 # defmt-rtt = { git = "https://github.com/knurling-rs/defmt", rev = "use defmt version supported by probe-rs (see changelog)" }
 # defmt-test = { git = "https://github.com/knurling-rs/defmt", rev = "use defmt version supported by probe-rs (see changelog)" }
 # panic-probe = { git = "https://github.com/knurling-rs/defmt", rev = "use defmt version supported by probe-rs (see changelog)" }
+
+
